@@ -11,18 +11,18 @@ Tables :
   Commandes  
   Stands  
 
-Cas d’utilisation :
+Cas d’utilisation :  
 
-Anonyme :
+Anonyme :  
+  Voir les artiste  
+  Voir les photos de la scène  
+  S’inscrire  
+  Se connecter  
+  Consulter le programme  
+
+Membre :  
+  Acheter un billet d'entrée   
   Voir les artiste
-  Voir les photos de la scène
-  S’inscrire
-  Se connecter
-  Consulter le programme
-
-Membre :
-	Acheter un billet d'entrée 
-	Voir les artiste
   Voir les photos de la scène
   Se déconnecter
 	Consulter le programme
