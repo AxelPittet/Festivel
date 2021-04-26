@@ -4,12 +4,12 @@ Le site consiste à organiser un festival : Le Festivel.
 
 Les utilisateurs du site pourront acheter des billets d’entrée et/ou s’informer en général sur le déroulement du festival et autres
 
-Tables :  
-	Scènes  
-	Artistes  
- 	Clients  
- 	Commandes  
- 	Stands  
+*Tables :  
+	*  Scènes  
+	*  Artistes  
+ 	*  Clients  
+ 	*  Commandes  
+ 	*  Stands  
 
 Cas d’utilisation :  
 
