@@ -10,8 +10,8 @@ Les utilisateurs du site pourront acheter des billets d’entrée et/ou s’info
 * Scènes  
 * Artistes  
 * Clients  
-* Commandes  
-* Stands  
+* Réservations  
+* Jours  
 
 ### Cas d’utilisation : ###  
 
