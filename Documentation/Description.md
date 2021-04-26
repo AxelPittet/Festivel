@@ -12,6 +12,7 @@ Les utilisateurs du site pourront acheter des billets d’entrée et/ou s’info
 * Clients  
 * Réservations  
 * Jours  
+* Concerts
 
 ### Cas d’utilisation : ###  
 
