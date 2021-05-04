@@ -52,9 +52,23 @@ Les tests seront effectués sur les navigateurs "Google Chrome" et "FireFox", su
 ### Analyse de risques :  
 
 Différents risques pouvant nuir à la réussite du projet :  
-- Quelconque catastrophe naturelle  
-- Absence d'un membre de l'équipe  
-- Perte des données  
+
+#### Données :  
+- Fichier corrompu
+- Perte du repository Github
+- Hack
+- Suppression accidentelle
+
+#### Environnement
+- Quelconque catastrophe naturelle
+
+#### Equipe :  
+- Mauvaise communication et/ou coordination
+- Membre absent
+
+#### Projet :  
+- Projet trop conséquent  
+
 
 ### MCD :  
 
