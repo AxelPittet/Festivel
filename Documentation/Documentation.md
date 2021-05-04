@@ -59,7 +59,7 @@ Différents risques pouvant nuir à la réussite du projet :
 - Hack
 - Suppression accidentelle
 
-#### Environnement
+#### Environnement :  
 - Quelconque catastrophe naturelle
 
 #### Equipe :  
