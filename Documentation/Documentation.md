@@ -43,6 +43,9 @@ En tant que...
 
 ### Stratégie de test :  
 
+Pour le développement du site web, nous outiliserons nos trois postes respectifs du CPNV ainsi que nos ordinateurs personnels. Nous utiliserons GitHub pour la gestion des fichiers et IceScrum pour la gestion du projet. Pour le stockage des données, nous utiliserons, comme souhaité, une base de donnée.
+
+Les tests seront effectués sur les navigateurs "Google Chrome" et "FireFox", sur nos trois postes du CPNV. Les premiers tests seront effectués par nos soins, part la suite les tests seront effectués par des cammarades choisis au hasard dans la classe:
 
 
 
