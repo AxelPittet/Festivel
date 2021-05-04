@@ -1,10 +1,11 @@
 # Documentation Projet-Web BDD “Festivel” #  
 Luke Cornaz, Sven Volery, Axel Pittet
 
-### Introduction :  (À COMPLÉTER)  
-Le site consiste à organiser un festival de musique : Le Festivel.
+### Introduction :    
+Le site consiste à l'organisation d'un festival de musique : Le Festivel.  
 
-Les utilisateurs du site pourront acheter des billets d’entrée et/ou s’informer en général sur le déroulement du festival et autres.
+Les utilisateurs du site pourront s’informer en général sur le déroulement du festival et acheter des billets journaliers/hebdomadaires pouvant être VIP si ils sont membres du site.  
+Les administrateurs du site pourront, eux, créer, modifier et supprimer différents concerts.
 
 
 ### Objectifs :    
