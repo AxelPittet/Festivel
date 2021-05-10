@@ -9,6 +9,8 @@ Les administrateurs du site pourront, eux, créer, modifier et supprimer différ
 
 ### Contexte :  
 
+Nous sommes un groupe d'apprentis en informatique étudiant à Sainte-Croix. Il nous a été demandé de réaliser un projet-web relié à une base de données. Nous sommes motivés à élaborer ce projet afin d'améliorer nos compétences en gestion de projet ainsi qu'en code (html, php, etc...)
+
 ### Organisation :  
 
 ### Objectifs :    
@@ -49,7 +51,6 @@ En tant que...
 Pour le développement du site web, nous outiliserons nos trois postes respectifs du CPNV ainsi que nos ordinateurs personnels. Nous utiliserons GitHub pour la gestion des fichiers et IceScrum pour la gestion du projet. Pour le stockage des données, nous utiliserons, comme souhaité, une base de donnée.
 
 Les tests seront effectués sur les navigateurs "Google Chrome" et "FireFox", sur nos trois postes du CPNV. Les premiers tests seront effectués par nos soins, part la suite les tests seront effectués par des cammarades choisis au hasard dans la classe.
-
 
 
 ### Analyse de risques :  
