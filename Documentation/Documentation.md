@@ -53,6 +53,34 @@ En tant que...
 
 ### Planification initiale :  
 
+#### Sprint 1 :  
+- Choix du thème et création de l’équipe
+- Création du MCD
+-	Création des users story
+-	Création du MLD
+-	Commencement de la documentation
+-	Création de l’arborescence MVC
+
+#### Sprint 2 :
+-	Commencement du gabarit
+-	Création du logo
+-	Création de la base de donnée
+-	Connexion de la BD au site
+-	Création de la page login
+-	Création de la page register
+-	Amélioration de la page home
+
+#### Sprint 3 :
+-	Création de la page d’achat
+-	Création d’un panier
+-	Création de la page contenant le programme et les photos de scène
+-	Création de la page des artistes
+
+#### Sprint 4 :
+-	Créer le CRUD des administrateurs
+-	Commencer les tests
+-	Améliorations après test
+-	Finalisation de la documentation
 
 
 
@@ -82,6 +110,9 @@ Différents risques pouvant nuir à la réussite du projet :
 
 #### Projet :  
 - Projet trop conséquent  
+
+
+### Journal de bord :  
 
 
 ### MCD :  
