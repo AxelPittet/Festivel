@@ -20,7 +20,9 @@ Mottier André / andre.mottier@cpnv.ch
 Élèves :
 
 Pittet Axel / Axel.PITTET@cpnv.ch
+
 Cornaz Luke / Luke.CORNAZ@cpnv.ch
+
 Volery Sven / Sven.VOLERY@cpnv.ch
 
 ### Objectifs :    
