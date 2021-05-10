@@ -13,15 +13,17 @@ Nous sommes un groupe d'apprentis en informatique étudiant à Sainte-Croix. Il 
 
 ### Organisation :  
 
--Product Owner :
+Product Owner :
 
--Mottier André / andre.mottier@cpnv.ch
+Mottier André / andre.mottier@cpnv.ch
 
--Élèves :
+Élèves :
 
--Pittet Axel / Axel.PITTET@cpnv.ch
--Cornaz Luke / Luke.CORNAZ@cpnv.ch
--Volery Sven / Sven.VOLERY@cpnv.ch
+Pittet Axel / Axel.PITTET@cpnv.ch
+
+Cornaz Luke / Luke.CORNAZ@cpnv.ch
+
+Volery Sven / Sven.VOLERY@cpnv.ch
 
 ### Objectifs :    
 
