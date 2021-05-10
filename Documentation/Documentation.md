@@ -13,7 +13,7 @@ Nous sommes un groupe d'apprentis en informatique étudiant à Sainte-Croix. Il 
 
 ### Organisation :  
 
-#Product Owner :
+##Product Owner :
 
 
 ### Objectifs :    
