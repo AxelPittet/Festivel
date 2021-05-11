@@ -11,6 +11,9 @@ if (isset($_GET['action'])) {
             break;
         default :
             home();
+        case 'register' :
+            register();
+            break;
     }
 } else {
     home();
