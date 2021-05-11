@@ -14,6 +14,9 @@ if (isset($_GET['action'])) {
         case 'register' :
             register();
             break;
+        case 'logout' :
+            logout();
+            break;
     }
 } else {
     home();
