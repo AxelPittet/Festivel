@@ -90,14 +90,13 @@
                         <div class="collapse navbar-collapse">
                             <ul class="nav navbar-nav navbar-right">
                                 <li class="smooth-menu"><a href="index.php?action=home">home</a></li>
-                                <li class="smooth-menu"><a href="#gallery">Destination</a></li>
-                                <li class="smooth-menu"><a href="#pack">Packages </a></li>
-                                <li class="smooth-menu"><a href="#spo">Special Offers</a></li>
-                                <li class="smooth-menu"><a href="#blog">blog</a></li>
-                                <li class="smooth-menu"><a href="#subs">subscription</a></li>
                                 <?php if (!isset($_SESSION['UserEmailAddress'])) : ?>
                                     <li>
                                         <button class="book-btn"><a href="index.php?action=register">S'inscrire</a>
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button class="book-btn"><a href="index.php?action=login">Se connecter</a>
                                         </button>
                                     </li>
                                 <?php else: ?>

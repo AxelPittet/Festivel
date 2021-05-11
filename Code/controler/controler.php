@@ -12,3 +12,8 @@ function logout(){
     session_destroy();
     require "view/home.php";
 }
+
+function login(){
+    //create_session();
+    require "view/home.php";
+}
