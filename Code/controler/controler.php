@@ -41,3 +41,38 @@ function login($loginRequest){
         require "view/login.php";
     }
 }
+
+function register($registerRequest)
+{
+    try {
+        //variable set
+        if (isset($registerRequest['inputUserEmailAddress']) && isset($registerRequest['inputUserPsw']) && isset($registerRequest['inputUserPswRepeat'])) {
+
+            //extract register parameters
+            $userEmailAddress = $registerRequest['inputUserEmailAddress'];
+            $userPsw = $registerRequest['inputUserPsw'];
+            $userPswRepeat = $registerRequest['inputUserPswRepeat'];
+
+            if ($userPsw == $userPswRepeat) {
+                require_once "model/usersManager.php";
+                if (registerNewAccount($userEmailAddress, $userPsw)) {
+                    createSession($userEmailAddress);
+                    $registerErrorMessage = null;
+                    require "view/home.php";
+                } else {
+                    $registerErrorMessage = "L'inscription n'est pas possible avec les valeurs saisies !";
+                    require "view/register.php";
+                }
+            } else {
+                $registerErrorMessage = "Les mots de passe ne sont pas similaires !";
+                require "view/register.php";
+            }
+        } else {
+            $registerErrorMessage = null;
+            require "view/register.php";
+        }
+    } catch (ModelDataBaseException $ex) {
+        $registerErrorMessage = "Nous rencontrons actuellement un problème technique. Il est temporairement impossible de s'enregistrer. Désolé du dérangement !";
+        require "view/register.php";
+    }
+}
