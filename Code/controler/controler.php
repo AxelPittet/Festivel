@@ -26,8 +26,7 @@ function login($loginRequest){
         //try to check if user/psw are matching with the database
         require_once "model/usersManager.php";
         if (isLoginCorrect($userEmailAddress, $userPsw)) {
-            $userType = getUserType($userEmailAddress);
-            createSession($userEmailAddress, $userType);
+            createSession($userEmailAddress);
             $_GET['loginError'] = false;
             $_GET['action'] = "home";
             require "view/home.php";
