@@ -13,10 +13,6 @@ function createSession($userEmailAddress)
     $_SESSION['userEmailAddress'] = $userEmailAddress;
 }
 
-function register(){
-    require "view/register.php";
-}
-
 function logout(){
     session_destroy();
     require "view/home.php";
@@ -46,20 +42,23 @@ function login($loginRequest){
     }
 }
 
-function register($registerRequest)
-{
+function register($registerRequest){
     try {
-        //variable set
-        if (isset($registerRequest['inputUserEmailAddress']) && isset($registerRequest['inputUserPsw']) && isset($registerRequest['inputUserPswRepeat'])) {
 
-            //extract register parameters
+        if (isset($registerRequest['inputUserEmailAddress']) && isset($registerRequest['inputUserPsw']) && isset($registerRequest['inputUserPswRepeat'])
+            && isset($registerRequest['inputUserName']) && isset($registerRequest['inputFirstName']) && isset($registerRequest['inputUserName'])
+            && isset($registerRequest['inputUserNumberPhone'])) {
+
+            $userName =  $registerRequest ['inputUserName'];
+            $userFirstName = $registerRequest ['inputFirstName'];
+            $userNumberPhone = $registerRequest ['inputUserNumberPhone'];
             $userEmailAddress = $registerRequest['inputUserEmailAddress'];
             $userPsw = $registerRequest['inputUserPsw'];
             $userPswRepeat = $registerRequest['inputUserPswRepeat'];
 
             if ($userPsw == $userPswRepeat) {
                 require_once "model/usersManager.php";
-                if (registerNewAccount($userEmailAddress, $userPsw)) {
+                if (registerNewAccount($userEmailAddress, $userPsw, $userName, $userFirstName, $userNumberPhone)) {
                     createSession($userEmailAddress);
                     $registerErrorMessage = null;
                     require "view/home.php";
