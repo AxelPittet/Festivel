@@ -8,6 +8,11 @@ function programme(){
     require "view/programme.php";
 }
 
+function createSession($userEmailAddress)
+{
+    $_SESSION['userEmailAddress'] = $userEmailAddress;
+}
+
 function register(){
     require "view/register.php";
 }
