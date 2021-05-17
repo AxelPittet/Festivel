@@ -4,6 +4,10 @@ function home(){
     require "view/home.php";
 }
 
+function programme(){
+    require "view/programme.php";
+}
+
 function register(){
     require "view/register.php";
 }
