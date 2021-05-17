@@ -13,7 +13,7 @@ if (isset($_GET['action'])) {
             programme();
             break;
         case 'register' :
-            register();
+            register($_POST);
             break;
         case 'logout' :
             logout();
