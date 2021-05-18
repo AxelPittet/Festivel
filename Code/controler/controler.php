@@ -40,8 +40,7 @@ function login($loginRequest){
 }
 
 function register($registerRequest){
-    try {
-
+//if a register request was submitted
         if (isset($registerRequest['inputUserEmailAddress']) && isset($registerRequest['inputUserPsw']) && isset($registerRequest['inputUserPswRepeat'])
             && isset($registerRequest['inputUserName']) && isset($registerRequest['inputFirstName']) && isset($registerRequest['inputUserName'])
             && isset($registerRequest['inputUserNumberPhone'])) {
@@ -71,8 +70,4 @@ function register($registerRequest){
             $registerErrorMessage = null;
             require "view/register.php";
         }
-    } catch (ModelDataBaseException $ex) {
-        $registerErrorMessage = "Nous rencontrons actuellement un problème technique. Il est temporairement impossible de s'enregistrer. Désolé du dérangement !";
-        require "view/register.php";
-    }
 }
