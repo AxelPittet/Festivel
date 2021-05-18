@@ -89,11 +89,11 @@
                         </div><!-- /.navbar-header-->
                         <div class="collapse navbar-collapse">
                             <ul class="nav navbar-nav navbar-right">
-                                <li><a href="index.php?action=home">Home</a></li>
-                                <li><a href="index.php?action=programme">Programme</a></li>
+                                <li><a id="navi" href="index.php?action=home">Home</a></li>
+                                <li><a id="navi" href="index.php?action=programme">Programme</a></li>
                                 <?php if (!isset($_SESSION['userEmailAddress'])) : ?>
                                     <li>
-                                        <button class="book-btn"><a href="index.php?action=register">S'inscrire</a>
+                                        <button  class="book-btn"><a href="index.php?action=register">S'inscrire</a>
                                         </button>
                                     </li>
                                     <li>
