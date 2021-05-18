@@ -47,12 +47,12 @@ function openDBConnexion()
 {
     $tempDbConnexion = null;
 
-    $sqlDriver = '';
-    $hostname = '';
-    $port = '';
+    $sqlDriver = 'mysql';
+    $hostname = 'localhost';
+    $port = '3308';
     $charset = 'utf8';
-    $dbName = '';
-    $userName = '';
+    $dbName = 'festivel';
+    $userName = 'root';
     $userPwd = '';
     $dsn = $sqlDriver . ':host=' . $hostname . ';dbname=' . $dbName . ';port=' . $port . ';charset=' . $charset;
 
