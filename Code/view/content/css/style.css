@@ -30,6 +30,14 @@ font-family: 'Poppins', sans-serif;
 /*-------------------------------------
 		1.General css (Reset code)
 --------------------------------------*/
+#titre_1{
+    text-align: center;
+}
+
+#navi{
+    color: rgb(11, 82, 137);
+}
+
 *{
     padding: 0;
     margin: 0;
@@ -222,7 +230,7 @@ html,body{
 .main-menu  .nav  li.active a,
 .main-menu  .nav  li a:hover,
 .main-menu .nav  li a:focus{
-    color: #00d8ff;
+    color: #0B5289;
     background-color:transparent;
 }
 .main-menu .nav a:before{
@@ -255,9 +263,7 @@ html,body{
     font-size: 16px;
     float:left;
 }
-.main-menu .navbar-toggle {
-    color: #00d8ff;
-}
+
 .main-menu .navbar-default .navbar-toggle:focus, 
 .main-menu .navbar-default .navbar-toggle:hover {
     background-color: transparent;
@@ -265,18 +271,18 @@ html,body{
 
 
 .home-border{
-    border-top:2px solid #fff;
+    border-top:2px solid #0B5289;
 }
 
 /*book-btn*/
 .book-btn {
-	background: #00d8ff;
-    border: 1px solid #00d8ff;
+	background-color: rgb(11, 82, 137);
+    border: 1px solid #0B5289;
     width: 120px;
     height: 40px;
     white-space: nowrap;
     text-align: center;
-    color: #fff;
+    color: #ffffff;
     font-size:14px;
     font-family: 'Poppins', sans-serif;
     text-transform: capitalize;
@@ -288,9 +294,9 @@ html,body{
     transition: 0.5s ease-in-out;
 }
 .book-btn:hover{
-    color: #fff;
-    background: #00d8d5;
-    border: 1px solid #00d8d5;
+    color: #0B5289;
+    background: #E1F8FA;
+    border: 1px solid #0B5289;
 }/*book-btn*/
 
 /*-------------------------------------
@@ -312,7 +318,7 @@ html,body{
 	left: 0;
 	width: 100%;
 	height: 100%;
-	background: rgba(224, 56, 26, 0.4);
+	background: rgba(225, 248, 250, 0);
 }
 
 /*about-us-content*/
@@ -320,7 +326,7 @@ html,body{
 	margin: -175px 0 0 0;
 }
 .about-us h2 {
-	color:rgb(16, 0, 75);	
+	color: rgb(11, 82, 137);
 	font-size:84px;
 	text-transform: inherit;
 	max-width: 800px;
