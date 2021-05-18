@@ -19,3 +19,15 @@ function isLoginCorrect($userEmailAddress, $userPsw)
 
     return $result;
 }
+
+function registerNewAccount($userEmailAddress, $userPsw, $userName, $userFirstName, $userNumberPhone)
+{
+
+    $register = "INSERT INTO users (name, firstname, email, phoneNumber, password, userType) VALUES ('$userName', '$userFirstName', '$userEmailAddress', '$userNumberPhone', '$userPsw', 1)";
+
+    require_once 'model/dbconnector.php';
+    //echo $register;
+    $registerResult = executeQueryIUD($register);
+
+    return $registerResult;
+}
