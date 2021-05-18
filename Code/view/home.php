@@ -4,13 +4,10 @@ ob_start();
 
     <section id="home" class="about-us">
 
-        <h2>
-            TEST
-        </h2>
         <div class="about-btn">
-            <button class="about-view">
-                explore now
-            </button>
+            <h2 class="tire">
+                Bienvenu sur Festivel, le meilleur festival de la région
+            </h2>
         </div><!--/.about-btn-->
     </section>
 
