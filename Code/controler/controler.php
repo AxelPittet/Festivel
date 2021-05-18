@@ -1,10 +1,30 @@
 <?php
 
-function home(){
+function home()
+{
     require "view/home.php";
 }
 
-function programme(){
+function programme()
+{
+    require "model/concertsManager.php";
+    $concerts = getConcerts();
+    $artists = getArtists();
+    $days = getDays();
+
+
+    //foreach ($concerts as $concert) {
+    //    foreach ($artists as $artist) {
+    //        if ($concert['artists_id'] == $artist['id']) {
+    //            foreach ($days as $day) {
+    //                if ($concert['days_id'] == $day['id']) {
+//
+    //                }
+    //            }
+    //        }
+    //    }
+    //}
+
     require "view/programme.php";
 }
 
@@ -13,12 +33,14 @@ function createSession($userEmailAddress)
     $_SESSION['userEmailAddress'] = $userEmailAddress;
 }
 
-function logout(){
+function logout()
+{
     session_destroy();
     require "view/home.php";
 }
 
-function login($loginRequest){
+function login($loginRequest)
+{
 //if a login request was submitted
     if (isset($loginRequest['inputUserEmailAddress']) && isset($loginRequest['inputUserPsw'])) {
         //extract login parameters
@@ -39,35 +61,36 @@ function login($loginRequest){
     }
 }
 
-function register($registerRequest){
+function register($registerRequest)
+{
 //if a register request was submitted
-        if (isset($registerRequest['inputUserEmailAddress']) && isset($registerRequest['inputUserPsw']) && isset($registerRequest['inputUserPswRepeat'])
-            && isset($registerRequest['inputUserName']) && isset($registerRequest['inputFirstName']) && isset($registerRequest['inputUserName'])
-            && isset($registerRequest['inputUserNumberPhone'])) {
+    if (isset($registerRequest['inputUserEmailAddress']) && isset($registerRequest['inputUserPsw']) && isset($registerRequest['inputUserPswRepeat'])
+        && isset($registerRequest['inputUserName']) && isset($registerRequest['inputFirstName']) && isset($registerRequest['inputUserName'])
+        && isset($registerRequest['inputUserNumberPhone'])) {
 
-            $userName =  $registerRequest ['inputUserName'];
-            $userFirstName = $registerRequest ['inputFirstName'];
-            $userNumberPhone = $registerRequest ['inputUserNumberPhone'];
-            $userEmailAddress = $registerRequest['inputUserEmailAddress'];
-            $userPsw = $registerRequest['inputUserPsw'];
-            $userPswRepeat = $registerRequest['inputUserPswRepeat'];
+        $userName = $registerRequest ['inputUserName'];
+        $userFirstName = $registerRequest ['inputFirstName'];
+        $userNumberPhone = $registerRequest ['inputUserNumberPhone'];
+        $userEmailAddress = $registerRequest['inputUserEmailAddress'];
+        $userPsw = $registerRequest['inputUserPsw'];
+        $userPswRepeat = $registerRequest['inputUserPswRepeat'];
 
-            if ($userPsw == $userPswRepeat) {
-                require_once "model/usersManager.php";
-                if (registerNewAccount($userEmailAddress, $userPsw, $userName, $userFirstName, $userNumberPhone)) {
-                    createSession($userEmailAddress);
-                    $registerErrorMessage = null;
-                    require "view/home.php";
-                } else {
-                    $registerErrorMessage = "L'inscription n'est pas possible avec les valeurs saisies !";
-                    require "view/register.php";
-                }
+        if ($userPsw == $userPswRepeat) {
+            require_once "model/usersManager.php";
+            if (registerNewAccount($userEmailAddress, $userPsw, $userName, $userFirstName, $userNumberPhone)) {
+                createSession($userEmailAddress);
+                $registerErrorMessage = null;
+                require "view/home.php";
             } else {
-                $registerErrorMessage = "Les mots de passe ne sont pas similaires !";
+                $registerErrorMessage = "L'inscription n'est pas possible avec les valeurs saisies !";
                 require "view/register.php";
             }
         } else {
-            $registerErrorMessage = null;
+            $registerErrorMessage = "Les mots de passe ne sont pas similaires !";
             require "view/register.php";
         }
+    } else {
+        $registerErrorMessage = null;
+        require "view/register.php";
+    }
 }
