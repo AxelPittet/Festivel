@@ -13,7 +13,7 @@
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet"/>
 
     <!-- TITLE OF SITE -->
-    <title>Travel</title>
+    <title>Festivel</title>
 
     <!-- favicon img -->
     <link rel="shortcut icon" type="image/icon" href="view/content/logo/favicon.png"/>
@@ -73,7 +73,7 @@
                 <div class="col-sm-2">
                     <div class="logo">
                         <a href="gabarit.php">
-                            tour<span>Nest</span>
+                            tour<span><strong>Festivel</strong></span>
                         </a>
                     </div><!-- /.logo-->
                 </div><!-- /.col-->
