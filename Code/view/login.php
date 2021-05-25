@@ -16,14 +16,14 @@ ob_start();
             </div>
             <div class="col-lg-6 col-md-6 bg-light">
                 <div class="login_part_form">
-                    <div class="login_part_form_iner">
+                    <div class="login_part_form_iner" id="divTexteLogin">
                         <h3><strong>Se connecter</strong></h3><br>
                         <form class="form" action="index.php?action=login" method="post">
                             <div class="col-md-12 form-group p_star">
-                                <label for="userEmail"><b>Adresse email</b></label><input type="email" class="form-control" placeholder="Email address" name="inputUserEmailAddress" required>
+                                <label for="userEmail"><b>Adresse email</b></label><input id="bordureTexte" type="email" class="form-control" placeholder="Email address" name="inputUserEmailAddress" required>
                             </div>
                             <div class="col-md-12 form-group p_star">
-                                <label for="userPsw"><b>Mot de passe</b></label><input type="password" class="form-control" id="password" name="inputUserPsw" value=""
+                                <label for="userPsw"><b>Mot de passe</b></label><input id="bordureTexte" type="password" class="form-control" id="password" name="inputUserPsw" value=""
                                                                                        placeholder="Mot de passe">
                             </div>
                             <div class="col-md-12 form-group">
