@@ -121,6 +121,7 @@
     <?= $content; ?>
 </div>
 <!-- footer-copyright start -->
+
 <footer class="footer-copyright">
     <div class="container">
         <div class="footer-content">
@@ -166,7 +167,6 @@
                         </div><!--/.single-footer-txt-->
                     </div><!--/.single-footer-item-->
                 </div><!--/.col-->
-
                 <div class="col-sm-3">
                     <div class="single-footer-item text-center">
                         <h2 class="text-left">contacts</h2>
