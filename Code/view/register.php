@@ -41,7 +41,7 @@ ob_start();
                                                                                            placeholder="Mot de passe(vérification)">
                                 </div>
                                 <div class="col-md-12 form-group">
-                                    <input type="submit" value="Inscrivez-vous" class="flex-c-m size10 bg4 bo-rad-23 hov1 m-text3 trans-0-4">
+                                    <input id="btnInscription" type="submit" value="Inscrivez-vous" class="flex-c-m size10 bg4 bo-rad-23 hov1 m-text3 trans-0-4">
                                 </div>
                             </form>
                         </div>
