@@ -1568,4 +1568,33 @@ html,body{
     text-align: center;
 }
 
+#btnInscription{
+    background-color: #3b5999;
+    color: white;
+    border-color: #3b5999;
+    padding: 4px;
+    border-radius: 5px;
+}
+
+#btnInscription:hover{
+    background-color: white;
+    color: #3b5999;
+    border-color: #3b5999;
+    padding: 4px;
+}
+
+#btnConnexion{
+    background-color: #3b5999;
+    color: white;
+    border-color: #3b5999;
+    padding: 4px;
+    border-radius: 5px;
+}
+
+#btnConnexion:hover{
+    background-color: white;
+    color: #3b5999;
+    border-color: #3b5999;
+    padding: 4px;
+}
 /*========================Thank you=================*/
