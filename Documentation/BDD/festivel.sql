@@ -1,6 +1,6 @@
--- Author : Luke Cornaz, Sven Volery, Axel Pittet
+-- Author : Luke Cornaz, Axel Pittet, Sven Volery
 -- Hôte : 127.0.0.1:3308
--- Généré le :  mar. 25 mai 2021 à 06:42
+-- Généré le :  mar. 25 mai 2021 à 09:35
 -- Version du serveur :  5.7.21
 -- Version de PHP :  5.6.35
 
@@ -67,19 +67,24 @@ CREATE TABLE IF NOT EXISTS `concerts` (
   PRIMARY KEY (`id`),
   KEY `fk_concerts_artists_idx` (`artist_id`),
   KEY `fk_concerts_days1_idx` (`days_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=12 DEFAULT CHARSET=latin1;
 
 --
 -- Déchargement des données de la table `concerts`
 --
 
 INSERT INTO `concerts` (`id`, `startTime`, `endTime`, `artist_id`, `days_id`) VALUES
-(1, '18:30:00.000000', '20:00:00.000000', 1, 0),
-(2, '19:00:00.000000', '21:00:00.000000', 2, 0),
-(3, '20:30:00.000000', '22:00:00.000000', 3, 0),
-(4, '21:00:00.000000', '23:00:00.000000', 4, 0),
-(5, '22:30:00.000000', '00:00:00.000000', 5, 0),
-(6, '23:00:00.000000', '01:00:00.000000', 6, 0);
+(1, '18:30:00.000000', '20:00:00.000000', 1, 1),
+(2, '19:00:00.000000', '21:00:00.000000', 2, 1),
+(3, '20:30:00.000000', '22:00:00.000000', 3, 1),
+(4, '21:00:00.000000', '23:00:00.000000', 4, 1),
+(5, '22:30:00.000000', '00:00:00.000000', 5, 1),
+(6, '23:00:00.000000', '01:00:00.000000', 6, 1),
+(7, '18:30:00.000000', '20:00:00.000000', 7, 2),
+(8, '19:00:00.000000', '21:00:00.000000', 8, 2),
+(9, '21:30:00.000000', '00:00:00.000000', 9, 2),
+(10, '20:30:00.000000', '22:00:00.000000', 6, 2),
+(11, '22:30:00.000000', '00:00:00.000000', 10, 2);
 
 -- --------------------------------------------------------
 
@@ -94,6 +99,23 @@ CREATE TABLE IF NOT EXISTS `concerts_workthrough_scenes` (
   KEY `fk_concerts_has_scenes_scenes1_idx` (`scenes_id`),
   KEY `fk_concerts_has_scenes_concerts1_idx` (`concerts_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Déchargement des données de la table `concerts_workthrough_scenes`
+--
+
+INSERT INTO `concerts_workthrough_scenes` (`concerts_id`, `scenes_id`) VALUES
+(4, 1),
+(3, 2),
+(2, 1),
+(1, 2),
+(5, 2),
+(6, 1),
+(7, 2),
+(8, 1),
+(9, 1),
+(10, 2),
+(11, 2);
 
 -- --------------------------------------------------------
 
