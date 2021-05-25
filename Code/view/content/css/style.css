@@ -1593,8 +1593,25 @@ html,body{
 
 #btnConnexion:hover{
     background-color: white;
-    color: #3b5999;
-    border-color: #3b5999;
+    color: #0B5289;
+    border-color: #0B5289;
     padding: 4px;
 }
+
+#divTexteRegister{
+    float: left;
+    margin-top: 90px;
+    margin-bottom: 20px;
+}
+
+
+#bordureTexte{
+    border-color: #0B5289;
+}
+
+#divTexteLogin{
+    float: none;
+    margin-top: 80px;
+}
+
 /*========================Thank you=================*/
