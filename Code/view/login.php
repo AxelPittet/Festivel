@@ -27,7 +27,7 @@ ob_start();
                                                                                        placeholder="Mot de passe">
                             </div>
                             <div class="col-md-12 form-group">
-                                <input type="submit" value="Connectez-vous" class="flex-c-m size10 bg4 bo-rad-23 hov1 m-text3 trans-0-4">
+                                <input id="btnConnexion" type="submit" value="Connectez-vous" class="flex-c-m size10 bg4 bo-rad-23 hov1 m-text3 trans-0-4">
                             </div>
                         </form>
                     </div>
