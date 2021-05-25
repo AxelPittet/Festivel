@@ -42,6 +42,11 @@ font-family: 'Poppins', sans-serif;
     color: rgb(85, 171, 239);
 }
 
+.programme-table-border{
+    border: #1d5987 solid 1px;
+    border-collapse: separate;
+    margin: 50px;
+}
 
 *{
     padding: 0;
@@ -327,7 +332,13 @@ html,body{
 
 /*about-us-content*/
 .about-us-content{
-	margin: -175px 0 0 0;
+	margin: -300px 0 100px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-size: cover;
+    background-position: center;
 }
 .about-us h2 {
 	color: rgb(11, 82, 137);
@@ -337,8 +348,16 @@ html,body{
 	font-weight: 600;
 	line-height: 1.22;
 }
+.about-us h3 {
+    color: rgb(11, 82, 137);
+    font-size:50px;
+    text-transform: inherit;
+    max-width: 800px;
+    font-weight: 600;
+    line-height: 1.22;
+}
 .about-us h2 span{
-	color:#2bdab5;
+	color: #2ba3da;
 	margin-top: -11px;
 }
 .about-btn {
