@@ -38,6 +38,11 @@ font-family: 'Poppins', sans-serif;
     color: rgb(11, 82, 137);
 }
 
+#navi:hover{
+    color: rgb(85, 171, 239);
+}
+
+
 *{
     padding: 0;
     margin: 0;
@@ -167,7 +172,7 @@ html,body{
 .is-sticky .header-area:after{
     position:absolute;
     content:'';
-    background: rgba(77,78,84,1);
+    background: rgb(255, 255, 255);
     height:100%;
     width:100%;
     top:0;
@@ -194,7 +199,7 @@ html,body{
     padding: 10px 0 0 0;
 }
 .logo a span{
-    color: #00d8ff;
+    color: #0B5289;
     text-transform: capitalize;
 }
 
@@ -250,7 +255,6 @@ html,body{
 }
 .main-menu .nav li.active  a:before,
 .main-menu .nav a:hover:before{
-    background: #00d8ff;
     width: 100%;
 }
 
@@ -1564,5 +1568,33 @@ html,body{
     text-align: center;
 }
 
+#btnInscription{
+    background-color: #3b5999;
+    color: white;
+    border-color: #3b5999;
+    padding: 4px;
+    border-radius: 5px;
+}
 
+#btnInscription:hover{
+    background-color: white;
+    color: #3b5999;
+    border-color: #3b5999;
+    padding: 4px;
+}
+
+#btnConnexion{
+    background-color: #3b5999;
+    color: white;
+    border-color: #3b5999;
+    padding: 4px;
+    border-radius: 5px;
+}
+
+#btnConnexion:hover{
+    background-color: white;
+    color: #3b5999;
+    border-color: #3b5999;
+    padding: 4px;
+}
 /*========================Thank you=================*/
