@@ -1523,7 +1523,7 @@ html,body{
     margin-top:28px;
 }
 .foot-icons p a,.foot-icons p a:hover,.foot-icons p a:focus{
-    color:#00d8ff;
+    color: #0B5289;
     font-size:16px;
     margin-top:28px;
 }/*foot-icons*/
@@ -1545,7 +1545,7 @@ html,body{
     cursor: pointer;
     z-index:15;
     color: #fff;
-    background:#00d8ff;
+    background: #0B5289;
 	border:1px solid #00d8ff;
 	border-radius:5px;
 	-webkit-transition: .5s; 
