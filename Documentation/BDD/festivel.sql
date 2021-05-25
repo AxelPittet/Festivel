@@ -1,7 +1,4 @@
--- phpMyAdmin SQL Dump
--- version 4.7.9
--- https://www.phpmyadmin.net/
---
+-- Author : Luke Cornaz, Sven Volery, Axel Pittet
 -- Hôte : 127.0.0.1:3308
 -- Généré le :  mar. 25 mai 2021 à 06:42
 -- Version du serveur :  5.7.21
