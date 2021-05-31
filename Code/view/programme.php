@@ -28,7 +28,7 @@ ob_start();
                 <div class="programme-table" style="
                 height: 300px;
                 width: 500px;
-                background-image: url('/view/content/images/artistes/<?= $artist['image']?>.png');
+                background-image: url('/view/content/images/artistes/<?= $artist['picture']?>');
                 background-size: 500px 300px">
 
                     <h2 class="programme-artist-name"><?= $artist['artistName']?></h2>
@@ -75,10 +75,10 @@ ob_start();
                 <div class="programme-table" style="
                 height: 300px;
                 width: 500px;
-                background-image: url('/view/content/images/artistes/damso.png');
+                background-image: url('/view/content/images/artistes/<?= $artist['picture']?>');
                 background-size: 500px 300px">
 
-                    <h2 class="programme-artist-name">Dems</h2>
+                    <h2 class="programme-artist-name"><?= $artist['artistName']?></h2>
                 </div>
             </td>
             <?php if ($i == 3 || $i == 6) : ?>
