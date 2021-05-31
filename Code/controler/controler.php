@@ -7,10 +7,10 @@ function home()
 
 function programme()
 {
-    //require "model/concertsManager.php";
-    //$concerts = getConcerts();
-    //$artists = getArtists();
-    //$days = getDays();
+    require "model/concertsManager.php";
+    $concerts = getConcerts();
+    $artists = getArtists();
+    $days = getDays();
 
 
     //foreach ($concerts as $concert) {
