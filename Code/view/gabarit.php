@@ -93,7 +93,7 @@
                                 <li><a id="navi" href="index.php?action=programme">Programme</a></li>
                                 <?php if (!isset($_SESSION['userEmailAddress'])) : ?>
                                     <li>
-                                        <button  class="book-btn"><a href="index.php?action=register">S'inscrire</a>
+                                        <button class="book-btn"><a href="index.php?action=register">S'inscrire</a>
                                         </button>
                                     </li>
                                     <li>
@@ -102,9 +102,9 @@
                                     </li>
                                 <?php else: ?>
                                     <li>
-                                        <button id="btnDeconnexion" class="book-btn"><a href="index.php?action=logout">Se déconnecter</a>
-                                        </button>
+                                        <button id="btnDeconnexion" class="book-btn"><a href="index.php?action=logout">Se déconnecter</a></button>
                                     </li>
+                                    <li><a id="navi" href="index.php?action=panier">Panier</a></li>
                                 <?php endif; ?>
                             </ul>
                         </div><!-- /.navbar-collapse -->
@@ -178,9 +178,12 @@
         <hr>
         <div class="foot-icons ">
             <ul class="footer-social-links list-inline list-unstyled">
+                <li><a href="https://m.facebook.com/profile.php?ref=m_upload_pic&_rdr" target="_blank"
+                       class="foot-icon-bg-1"><i class="fa fa-facebook"></i></a></li>
                 <li><a href="https://www.facebook.com/profile.php?id=100068881327400" target="_blank" class="foot-icon-bg-1"><i class="fa fa-facebook"></i></a></li>
                 <li><a href="#" target="_blank" class="foot-icon-bg-2"><i class="fa fa-twitter"></i></a></li>
-                <li><a href="https://www.instagram.com/festivel_2021/" target="_blank" class="foot-icon-bg-3"><i class="fa fa-instagram"></i></a></li>
+                <li><a href="https://www.instagram.com/festivel_2021/" target="_blank" class="foot-icon-bg-3"><i
+                                class="fa fa-instagram"></i></a></li>
             </ul>
             <p>&copy; 2017 <a href="https://www.themesine.com">ThemeSINE</a>. All Right Reserved</p>
 
