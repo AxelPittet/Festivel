@@ -7,35 +7,23 @@ ob_start();
 </section>
 <section class="about-us-content">
     <table class="table-responsive col-lg-6">
-        <tbody>
         <tr>
-            <td>
-                <div class="programme-table-border">
-                    <h2>Damso</h2>
-                </div>
-            </td>
-            <td>
-                <div class="programme-table-border">
-                    <h2>PLK</h2>
-                </div>
-            </td>
-            <td>
-                <div class="programme-table-border">
-                    <h2>Larry</h2>
-                </div>
-            </td>
-            <td>
-                <div class="programme-table-border">
-                    <h2>Larry</h2>
-                </div>
-            </td>
-            <td>
-                <div class="programme-table-border">
-                    <h2>Larry</h2>
-                </div>
-            </td>
+            <?php foreach ($concerts as $concert):
+                foreach ($artists as $artist):
+                    if ($concert['artists_id'] == $artist['id']):
+                        foreach ($days as $day):
+                            if ($concert['days_id'] == $day['id']): ?>
+                                <td>
+                                    <div class="programme-table">
+                                        <h2 class="programme-artist-name"><?=$artist['artistName'] ?></h2>
+                                    </div>
+                                </td>
+                            <?php endif;
+                        endforeach;
+                    endif;
+                endforeach;
+            endforeach; ?>
         </tr>
-        </tbody>
     </table>
 </section>
 
