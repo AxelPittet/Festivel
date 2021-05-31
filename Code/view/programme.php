@@ -13,9 +13,9 @@ ob_start();
                 if ($concert['artist_id'] == $artist['id']):
                     foreach ($days as $day):
                         if ($concert['days_id'] == $day['id']):
-                            if ($day['id'] == '2021-06-26'):
+                            if ($day['date'] == '2021-06-26'):
                                 $i++;
-                                if ($i == 3 || $i == 6) : ?>
+                                if ($i == 4 || $i == 7): ?>
                                     <tr>
                                 <?php endif; ?>
                                 <td>

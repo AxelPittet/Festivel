@@ -21,6 +21,9 @@ if (isset($_GET['action'])) {
         case 'login' :
             login($_POST);
             break;
+        case 'panier' :
+            panier();
+            break;
         default :
             home();
     }

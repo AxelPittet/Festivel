@@ -81,3 +81,7 @@ function register($registerRequest)
         require "view/register.php";
     }
 }
+
+function panier(){
+    require "view/panier.php";
+}
