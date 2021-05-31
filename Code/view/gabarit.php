@@ -102,7 +102,7 @@
                                     </li>
                                 <?php else: ?>
                                     <li>
-                                        <button class="book-btn"><a href="index.php?action=logout">Se déconnecter</a>
+                                        <button id="btnDeconnexion" class="book-btn"><a href="index.php?action=logout">Se déconnecter</a>
                                         </button>
                                     </li>
                                 <?php endif; ?>
