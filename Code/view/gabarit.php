@@ -165,7 +165,7 @@
                         <h2 class="text-left">contacts</h2>
                         <div class="single-footer-txt text-left">
                             <p>+41 24 847 31 81</p>
-                            <p>festivel.info@festivel.com</a></p>
+                            <p>info.festivel@gmail.com</a></p>
                             <p>Avenue de la Gare 14</p>
                             <p>1450 Sainte-Croix, CH</p>
                         </div><!--/.single-footer-txt-->
@@ -178,9 +178,9 @@
         <hr>
         <div class="foot-icons ">
             <ul class="footer-social-links list-inline list-unstyled">
-                <li><a href="#" target="_blank" class="foot-icon-bg-1"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="https://m.facebook.com/profile.php?ref=m_upload_pic&_rdr" target="_blank" class="foot-icon-bg-1"><i class="fa fa-facebook"></i></a></li>
                 <li><a href="#" target="_blank" class="foot-icon-bg-2"><i class="fa fa-twitter"></i></a></li>
-                <li><a href="#" target="_blank" class="foot-icon-bg-3"><i class="fa fa-instagram"></i></a></li>
+                <li><a href="https://www.instagram.com/festivel_2021/" target="_blank" class="foot-icon-bg-3"><i class="fa fa-instagram"></i></a></li>
             </ul>
             <p>&copy; 2017 <a href="https://www.themesine.com">ThemeSINE</a>. All Right Reserved</p>
 
