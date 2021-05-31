@@ -25,9 +25,13 @@ ob_start();
         <tr>
             <?php endif; ?>
             <td>
-                <div class="programme-table">
-                    <h2 class="programme-artist-name">Dems</h2>
-                    <img src="view/content/images/artistes/damso.png">
+                <div class="programme-table" style="
+                height: 300px;
+                width: 500px;
+                background-image: url('/view/content/images/artistes/<?= $artist['image']?>.png');
+                background-size: 500px 300px">
+
+                    <h2 class="programme-artist-name"><?= $artist['artistName']?></h2>
                 </div>
             </td>
             <?php if ($i == 3 || $i == 6) : ?>
@@ -68,9 +72,13 @@ ob_start();
         <tr>
             <?php endif; ?>
             <td>
-                <div class="programme-table">
+                <div class="programme-table" style="
+                height: 300px;
+                width: 500px;
+                background-image: url('/view/content/images/artistes/damso.png');
+                background-size: 500px 300px">
+
                     <h2 class="programme-artist-name">Dems</h2>
-                    <img src="view/content/images/artistes/damso.png">
                 </div>
             </td>
             <?php if ($i == 3 || $i == 6) : ?>
