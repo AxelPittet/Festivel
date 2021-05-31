@@ -12,19 +12,6 @@ function programme()
     $artists = getArtists();
     $days = getDays();
 
-
-    //foreach ($concerts as $concert) {
-    //    foreach ($artists as $artist) {
-    //        if ($concert['artists_id'] == $artist['id']) {
-    //            foreach ($days as $day) {
-    //                if ($concert['days_id'] == $day['id']) {
-//
-    //                }
-    //            }
-    //        }
-    //    }
-    //}
-
     require "view/programme.php";
 }
 
