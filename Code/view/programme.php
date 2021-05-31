@@ -79,6 +79,7 @@ ob_start();
                 background-size: 500px 300px">
 
                     <h2 class="programme-artist-name"><?= $artist['artistName']?></h2>
+                    <h2 class="programme-artist-hours"><?= $concert['startTime'] . " - " . $concert['endTime'] ?></h2>
                 </div>
             </td>
             <?php if ($i == 3 || $i == 6) : ?>
