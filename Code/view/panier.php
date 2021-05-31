@@ -1,11 +1,11 @@
 <?php
 ob_start();
 ?>
-    <section class="about-us" id="center-top-card">
+    <section class="center-top-card">
         <meta charset="utf-8">
-        <h3>Votre panier</h3>
+        <h3>Votre panier</h3><br>
     </section>
-<section class="about-us-content">
+    <section id="cart">
         <div class="col-lg-auto">
             <div class="table-responsive">
                 <table class="tableCart center table textcolor">
@@ -17,7 +17,7 @@ ob_start();
                         <th>Date</th>
                     </tr>
                     <tr>
-                        <td>Un billet standard</td>
+                        <td>Billet standard</td>
                         <td>1</td>
                         <td>80 CHF</td>
                         <td>26/06/2021</td>
@@ -36,7 +36,7 @@ ob_start();
         </div>
         <br>
         <br>
-        <form class="center" method="post" action="/panier/checkout/">
+        <form class="text-center" method="post" action="/panier/checkout/">
             <button class="btn btn-secondary" type="submit">Procéder au paiment</button>
         </form>
     </section>

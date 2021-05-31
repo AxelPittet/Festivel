@@ -57,6 +57,20 @@ font-family: 'Poppins', sans-serif;
     border: black 2px solid;
 }
 
+.center-top-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    min-height: 300px;
+}
+
+#cart {
+    margin-bottom: 400px;
+}
+
 * {
     padding: 0;
     margin: 0;
