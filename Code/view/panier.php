@@ -1,10 +1,11 @@
 <?php
 ob_start();
 ?>
-    <section class="about-us">
+    <section class="about-us" id="center-top-card">
         <meta charset="utf-8">
         <h3>Votre panier</h3>
-        <br>
+    </section>
+<section class="about-us-content">
         <div class="col-lg-auto">
             <div class="table-responsive">
                 <table class="tableCart center table textcolor">
