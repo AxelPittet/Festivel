@@ -72,8 +72,8 @@
             <div class="row">
                 <div class="col-sm-2">
                     <div class="logo">
-                        <a href="gabarit.php">
-                            tour<span><strong>Festivel</strong></span>
+                        <a>
+                            <span><strong>Festivel</strong></span>
                         </a>
                     </div><!-- /.logo-->
                 </div><!-- /.col-->
@@ -130,11 +130,9 @@
                 <div class="col-sm-3">
                     <div class="single-footer-item">
                         <div class="footer-logo">
-                            <a href="gabarit.php">
-                                tour<span>Nest</span>
-                            </a>
+                            <a><span id="titre_footer"><strong>Festivel</strong></span></a>
                             <p>
-                                best travel agency
+                                Meilleut festival au monde
                             </p>
                         </div>
                     </div><!--/.single-footer-item-->
@@ -142,14 +140,11 @@
 
                 <div class="col-sm-3">
                     <div class="single-footer-item">
-                        <h2>link</h2>
+                        <h2>Liens</h2>
                         <div class="single-footer-txt">
-                            <p><a href="#">home</a></p>
-                            <p><a href="#">destination</a></p>
-                            <p><a href="#">spacial packages</a></p>
-                            <p><a href="#">special offers</a></p>
-                            <p><a href="#">blog</a></p>
-                            <p><a href="#">contacts</a></p>
+                            <p><a href="index.php?action=home">Home</a></p>
+                            <p><a href="index.php?action=programme">Programme</a></p>
+                            <p><a href="index.php?action=register">S'inscrire</a></p>
                         </div><!--/.single-footer-txt-->
                     </div><!--/.single-footer-item-->
 
@@ -157,13 +152,11 @@
 
                 <div class="col-sm-3">
                     <div class="single-footer-item">
-                        <h2>popular destination</h2>
+                        <h2>top chanteurs</h2>
                         <div class="single-footer-txt">
-                            <p><a href="#">china</a></p>
-                            <p><a href="#">venezuela</a></p>
-                            <p><a href="#">brazil</a></p>
-                            <p><a href="#">australia</a></p>
-                            <p><a href="#">london</a></p>
+                            <p><a href="#">Nekfeu</a></p>
+                            <p><a href="#">Freeze Coreleone</a></p>
+                            <p><a href="#">Zola</a></p>
                         </div><!--/.single-footer-txt-->
                     </div><!--/.single-footer-item-->
                 </div><!--/.col-->
@@ -171,10 +164,10 @@
                     <div class="single-footer-item text-center">
                         <h2 class="text-left">contacts</h2>
                         <div class="single-footer-txt text-left">
-                            <p>+1 (300) 1234 6543</p>
-                            <p class="foot-email"><a href="#">info@tnest.com</a></p>
-                            <p>North Warnner Park 336/A</p>
-                            <p>Newyork, USA</p>
+                            <p>+41 24 847 31 81</p>
+                            <p>festivel.info@festivel.com</a></p>
+                            <p>Avenue de la Gare 14</p>
+                            <p>1450 Sainte-Croix, CH</p>
                         </div><!--/.single-footer-txt-->
                     </div><!--/.single-footer-item-->
                 </div><!--/.col-->
