@@ -85,3 +85,7 @@ function register($registerRequest)
 function panier(){
     require "view/panier.php";
 }
+
+function billetterie(){
+    require "view/billetterie.php";
+}

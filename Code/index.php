@@ -24,6 +24,9 @@ if (isset($_GET['action'])) {
         case 'panier' :
             panier();
             break;
+        case 'billetterie' :
+            billetterie();
+            break;
         default :
             home();
     }
