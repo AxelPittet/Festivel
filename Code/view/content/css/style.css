@@ -47,16 +47,26 @@ font-family: 'Poppins', sans-serif;
     border-collapse: separate;
     margin: 50px;
     text-align: center;
-    height: 300px;
-    width: 500px;
-    background-size: 500px, 300px;
-    background-image: url("../images/artistes/damso.png");
 }
 
 .programme-artist-name {
     color: white;
     background: rgb(11, 82, 137);
     border: black 2px solid;
+}
+
+.center-top-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    min-height: 300px;
+}
+
+#cart {
+    margin-bottom: 400px;
 }
 
 * {

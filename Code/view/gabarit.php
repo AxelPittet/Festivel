@@ -11,7 +11,6 @@
     <link href="https://fonts.googleapis.com/css?family=Rufina:400,700" rel="stylesheet"/>
 
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet"/>
-
     <!-- TITLE OF SITE -->
     <title>Festivel</title>
 
@@ -105,7 +104,7 @@
                                     <li>
                                         <button id="btnDeconnexion" class="book-btn"><a href="index.php?action=logout">Se déconnecter</a></button>
                                     </li>
-                                    <li><a id="navi" href="index.php?action=panier">Panier</a></li>
+                                    <li><a id="navi" href="index.php?action=panier"><img src="view/content/images/home/cart.jpg" width="30px"></a></li>
                                 <?php endif; ?>
                             </ul>
                         </div><!-- /.navbar-collapse -->
@@ -179,8 +178,6 @@
         <hr>
         <div class="foot-icons ">
             <ul class="footer-social-links list-inline list-unstyled">
-                <li><a href="https://m.facebook.com/profile.php?ref=m_upload_pic&_rdr" target="_blank"
-                       class="foot-icon-bg-1"><i class="fa fa-facebook"></i></a></li>
                 <li><a href="https://www.facebook.com/profile.php?id=100068881327400" target="_blank" class="foot-icon-bg-1"><i class="fa fa-facebook"></i></a></li>
                 <li><a href="#" target="_blank" class="foot-icon-bg-2"><i class="fa fa-twitter"></i></a></li>
                 <li><a href="https://www.instagram.com/festivel_2021/" target="_blank" class="foot-icon-bg-3"><i

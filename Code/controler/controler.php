@@ -8,9 +8,9 @@ function home()
 function programme()
 {
     require "model/concertsManager.php";
-    $concerts = getConcerts();
-    $artists = getArtists();
-    $days = getDays();
+    //$concerts = getConcerts();
+    //$artists = getArtists();
+    //$days = getDays();
 
     require "view/programme.php";
 }
