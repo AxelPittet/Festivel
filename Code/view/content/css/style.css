@@ -47,10 +47,8 @@ font-family: 'Poppins', sans-serif;
     border-collapse: separate;
     margin: 50px;
     text-align: center;
-    height: 300px;
-    width: 500px;
-    background-size: 500px, 300px;
-    background-image: url("../images/artistes/damso.png");
+    height: auto;
+    width: 400px;
 }
 
 .programme-artist-name {
