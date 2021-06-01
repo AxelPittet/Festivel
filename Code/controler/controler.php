@@ -98,7 +98,7 @@ function concert()
     //$concerts = getConcerts();
     //$artists = getArtists();
     //$days = getDays();
-    //$concerts-scenes = getConcertsScenes
+    //$concertsScenes = getConcertsScenes
     //$scenes = getScenes();
 
     require "view/concert.php";
