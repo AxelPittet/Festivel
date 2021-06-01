@@ -154,7 +154,7 @@
                     <div class="single-footer-item">
                         <h2>top chanteurs</h2>
                         <div class="single-footer-txt">
-                            <p><a href="#">Damso</a></p>
+                            <p><a href="index.php?action=concert&concertId=1">Damso</a></p>
                             <p><a href="#">PLK</a></p>
                             <p><a href="#">Lary</a></p>
                             <p><a href="#">Nekfeu</a></p>
