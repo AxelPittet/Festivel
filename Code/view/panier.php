@@ -41,6 +41,25 @@ ob_start();
         </form>
     </section>
 
+
+
+<?php foreach ($_SESSION['panier'] as $key => $row) { ?>
+    <tr>
+        <td><?= $key ?></td>
+        <td><?= $row['Produit'] ?></td>
+        <td><?= $row['Quantité'] ?>
+            <a href="index.php?action=qtyChange&modif=1&key=<?=$key?>"><button>+</button></a>
+            <a href="index.php?action=qtyChange&modif=-1&key=<?=$key?>"><button>-</button></a>
+        </td>
+        <td><?= $row['Prix'] ?></td>
+        <td><?= $row['Date'] ?></td>
+        <td><a href="index.php?action=delCart&key=<?=$key?>">Supprimer</a></td>
+    </tr>
+<?php } ?>
+
+
+
+
 <?php
 $content = ob_get_clean();
 require "gabarit.php";

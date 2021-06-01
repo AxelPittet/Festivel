@@ -30,6 +30,9 @@ if (isset($_GET['action'])) {
         case 'concert' :
             concert();
             break;
+        case 'delCart' :
+            delCart($_GET['key']);
+            break;
         default :
             home();
     }

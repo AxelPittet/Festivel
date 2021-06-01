@@ -25,7 +25,7 @@ ob_start();
         <tr>
             <?php endif; ?>
             <td>
-                <a href="index.php?action=concert">
+                <a href="index.php?action=concert&concertId=<?= $concert['id']?>">
                     <div class="programme-table" style="
                             height: 300px;
                             width: 500px;

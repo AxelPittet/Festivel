@@ -71,7 +71,7 @@
             <div class="row">
                 <div class="col-sm-2">
                     <div class="logo">
-                        <a>
+                        <a href="index.php?action=home">
                             <span><strong>Festivel</strong></span>
                         </a>
                     </div><!-- /.logo-->

@@ -95,11 +95,19 @@ function billetterie()
 function concert()
 {
     $concertId = $_GET['concertId'];
-    //$concerts = getConcerts();
-    //$artists = getArtists();
-    //$days = getDays();
-    //$concertsScenes = getConcertsScenes
-    //$scenes = getScenes();
+    require "model/concertsManager.php";
+    $concerts = getConcerts();
+    $artists = getArtists();
+    $days = getDays();
+    $concertsScenes = getConcertsScenes();
+    $scenes = getScenes();
 
     require "view/concert.php";
+}
+
+function delCart($index)
+{
+    array_splice($_SESSION['panier'], $index, 1);
+
+    require "view/panier.php";
 }
