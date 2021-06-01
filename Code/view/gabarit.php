@@ -132,7 +132,7 @@
                         <div class="footer-logo">
                             <a><span id="titre_footer"><strong>Festivel</strong></span></a>
                             <p>
-                                Meilleut festival au monde
+                                Meilleur festival au monde
                             </p>
                         </div>
                     </div><!--/.single-footer-item-->
