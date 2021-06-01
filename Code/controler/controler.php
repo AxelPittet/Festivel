@@ -82,10 +82,24 @@ function register($registerRequest)
     }
 }
 
-function panier(){
+function panier()
+{
     require "view/panier.php";
 }
 
-function billetterie(){
+function billetterie()
+{
     require "view/billetterie.php";
+}
+
+function concert()
+{
+    $concertId = $_GET['concertId'];
+    //$concerts = getConcerts();
+    //$artists = getArtists();
+    //$days = getDays();
+    //$concerts-scenes = getConcertsScenes
+    //$scenes = getScenes();
+
+    require "view/concert.php";
 }

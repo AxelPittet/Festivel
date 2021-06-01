@@ -24,3 +24,13 @@ function getDays()
     return $days;
 }
 
+function getConcertsScenes
+
+function getScenes()
+{
+    $sql = "SELECT * FROM concerts_workthrough_scenes";
+    require_once "model/dbconnector.php";
+    $scenes = executeQuerySelect($sql);
+    return $scenes;
+}
+
