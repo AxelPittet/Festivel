@@ -27,6 +27,9 @@ if (isset($_GET['action'])) {
         case 'billetterie' :
             billetterie();
             break;
+        case 'concert' :
+            concert();
+            break;
         default :
             home();
     }
