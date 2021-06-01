@@ -132,7 +132,7 @@
                         <div class="footer-logo">
                             <a><span id="titre_footer"><strong>Festivel</strong></span></a>
                             <p>
-                                Meilleut festival au monde
+                                Meilleur festival au monde
                             </p>
                         </div>
                     </div><!--/.single-footer-item-->
@@ -184,7 +184,7 @@
                 <li><a href="https://www.instagram.com/festivel_2021/" target="_blank" class="foot-icon-bg-3"><i
                                 class="fa fa-instagram"></i></a></li>
             </ul>
-            <p>&copy; 2017 <a href="https://www.themesine.com">ThemeSINE</a>. All Right Reserved</p>
+            <p>&copy; 2021 <a href="https://www.themesine.com">Festivel</a>. All Right Reserved</p>
 
         </div><!--/.foot-icons-->
         <div id="scroll-Top">
