@@ -154,9 +154,10 @@
                     <div class="single-footer-item">
                         <h2>top chanteurs</h2>
                         <div class="single-footer-txt">
+                            <p><a href="#">Damso</a></p>
+                            <p><a href="#">PLK</a></p>
+                            <p><a href="#">Lary</a></p>
                             <p><a href="#">Nekfeu</a></p>
-                            <p><a href="#">Freeze Coreleone</a></p>
-                            <p><a href="#">Zola</a></p>
                         </div><!--/.single-footer-txt-->
                     </div><!--/.single-footer-item-->
                 </div><!--/.col-->
