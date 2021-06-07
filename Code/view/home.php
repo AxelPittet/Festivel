@@ -5,7 +5,7 @@ ob_start();
     <section id="home" class="about-us">
 
             <h2 id="titre_1">
-                Bienvenu sur Festivel
+                Bienvenue sur Festivel
             </h2>
     </section>
 
