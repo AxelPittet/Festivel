@@ -20,7 +20,7 @@ ob_start();
                             <li>Prix :
                             </li>
                             <br>
-                            <li><a href="index.php?action=buyBillet&day='2021-06-26'&vip=false&price=20"><input id="btnAcheter" type="submit" value="Acheter" class="flex-c-m size10 bg4 bo-rad-23 hov1 m-text3 trans-0-4">
+                            <li><a href="index.php?action=buyBillet&day=2021-06-26&vip=false&price=20"><input id="btnAcheter" type="submit" value="Acheter" class="flex-c-m size10 bg4 bo-rad-23 hov1 m-text3 trans-0-4">
                             </li>
                     </div>
                 </div>
@@ -38,7 +38,7 @@ ob_start();
                             <li>Prix :
                             </li>
                             <br>
-                            <li><a href="index.php?action=buyBillet&day='2021-06-26'&vip=true&price=30"><input id="btnAcheter" type="submit" value="Acheter" class="flex-c-m size10 bg4 bo-rad-23 hov1 m-text3 trans-0-4">
+                            <li><a href="index.php?action=buyBillet&day=2021-06-26&vip=true&price=30"><input id="btnAcheter" type="submit" value="Acheter" class="flex-c-m size10 bg4 bo-rad-23 hov1 m-text3 trans-0-4">
                             </li>
                     </div>
                 </div>
@@ -56,7 +56,7 @@ ob_start();
                             <li>Prix :
                             </li>
                             <br>
-                            <li><a href="index.php?action=buyBillet&day='2021-06-27'&vip=false&price=20"><input id="btnAcheter" type="submit" value="Acheter" class="flex-c-m size10 bg4 bo-rad-23 hov1 m-text3 trans-0-4">
+                            <li><a href="index.php?action=buyBillet&day=2021-06-27&vip=false&price=20"><input id="btnAcheter" type="submit" value="Acheter" class="flex-c-m size10 bg4 bo-rad-23 hov1 m-text3 trans-0-4">
                             </li>
                     </div>
                 </div>
@@ -74,7 +74,7 @@ ob_start();
                             <li>Prix :
                             </li>
                             <br>
-                            <li><a href="index.php?action=buyBillet&day='2021-06-27'&vip=true&price=30"><input id="btnAcheter" type="submit" value="Acheter" class="flex-c-m size10 bg4 bo-rad-23 hov1 m-text3 trans-0-4">
+                            <li><a href="index.php?action=buyBillet&day=2021-06-27&vip=true&price=30"><input id="btnAcheter" type="submit" value="Acheter" class="flex-c-m size10 bg4 bo-rad-23 hov1 m-text3 trans-0-4">
                             </li>
                     </div>
                 </div>

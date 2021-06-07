@@ -16,7 +16,31 @@ ob_start();
                         <th>Prix</th>
                         <th>Date</th>
                     </tr>
-                    <tr>
+                    <?php
+                    foreach ($reservations as $reservation) :
+                        foreach ($users as $user) :
+                            if ($user['reservations_id'] == $reservation['id']) :
+                                if ($user['email'] == $_SESSION['userEmailAddress']) : ?>
+                                    <tr>
+                                        <td></td>
+                                        <td>1</td>
+                                        <td>80 CHF</td>
+                                        <td>26/06/2021</td>
+                                        <td>
+                                            <form method="post" action="/panier/del/">
+                                                <input type="hidden" name="date" value="">
+                                                <button class="btn btn-secondary" type="submit">
+                                                    Supprimer
+                                                </button>
+                                            </form>
+                                        </td>
+                                    </tr>
+                                <?php
+                                endif;
+                            endif;
+                        endforeach;
+                    endforeach; ?>
+                    <!-- <tr>
                         <td>Billet standard</td>
                         <td>1</td>
                         <td>80 CHF</td>
@@ -29,7 +53,7 @@ ob_start();
                                 </button>
                             </form>
                         </td>
-                    </tr>
+                    </tr> -->
                     </tbody>
                 </table>
             </div>
@@ -40,24 +64,6 @@ ob_start();
             <button class="btn btn-secondary" type="submit">Procéder au paiment</button>
         </form>
     </section>
-
-
-
-<?php foreach ($_SESSION['panier'] as $key => $row) { ?>
-    <tr>
-        <td><?= $key ?></td>
-        <td><?= $row['Produit'] ?></td>
-        <td><?= $row['Quantité'] ?>
-            <a href="index.php?action=qtyChange&modif=1&key=<?=$key?>"><button>+</button></a>
-            <a href="index.php?action=qtyChange&modif=-1&key=<?=$key?>"><button>-</button></a>
-        </td>
-        <td><?= $row['Prix'] ?></td>
-        <td><?= $row['Date'] ?></td>
-        <td><a href="index.php?action=delCart&key=<?=$key?>">Supprimer</a></td>
-    </tr>
-<?php } ?>
-
-
 
 
 <?php

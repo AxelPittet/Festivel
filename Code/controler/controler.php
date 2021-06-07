@@ -85,7 +85,9 @@ function register($registerRequest)
 function panier()
 {
     require_once "model/billetsManager.php";
-    $panier = getPanier();
+    $reservations = getPanier();
+    require_once "model/usersManager.php";
+    $users = getUsers();
     require "view/panier.php";
 }
 

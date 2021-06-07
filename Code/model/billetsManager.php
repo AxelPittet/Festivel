@@ -2,7 +2,7 @@
 
 function addBilletBD($day, $vip, $price)
 {
-    $sql = "INSERT INTO reservations (vip, price, reservationNumber, days_id) VALUES ('$vip', '$price', '1', '$day')";
+    $sql = "INSERT INTO reservations (vip, price, reservationNumber, days_id) VALUES ('$vip', '$price', 1, '$day')";
 
     require_once 'model/dbconnector.php';
     $result = executeQueryIUD($sql);
@@ -10,10 +10,10 @@ function addBilletBD($day, $vip, $price)
     return $result;
 }
 
-function getArtists()
+function getPanier()
 {
-    $sql = "SELECT * FROM artists";
+    $sql = "SELECT * FROM reservations";
     require_once "model/dbconnector.php";
-    $artists = executeQuerySelect($sql);
-    return $artists;
+    $reservations = executeQuerySelect($sql);
+    return $reservations;
 }

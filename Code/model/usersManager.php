@@ -31,3 +31,11 @@ function registerNewAccount($userEmailAddress, $userPsw, $userName, $userFirstNa
 
     return $registerResult;
 }
+
+function getUsers()
+{
+    $sql = "SELECT * FROM users";
+    require_once "model/dbconnector.php";
+    $users = executeQuerySelect($sql);
+    return $users;
+}
