@@ -157,7 +157,7 @@
                             <p><a href="index.php?action=concert&concertId=1">Damso</a></p>
                             <p><a href="index.php?action=concert&concertId=2">PLK</a></p>
                             <p><a href="index.php?action=concert&concertId=3">Lary</a></p>
-                            <p><a href="index.php?action=concert&concertId=4">Nekfeu</a></p>
+                            <p><a href="index.php?action=concert&concertId=4">Vald</a></p>
                         </div><!--/.single-footer-txt-->
                     </div><!--/.single-footer-item-->
                 </div><!--/.col-->
