@@ -1,10 +1,19 @@
 <?php
 
-function snowLeasingAdd($codeSnow)
+function addBilletBD($day, $vip, $price)
 {
-    if (!isset($_SESSION['cartSnow'])) {
-        $_SESSION['cartSnow'] = [];
-    }
-    $newSnowLeasing = array('code' => $codeSnow['code'], 'dateD' => date('Y-m-d'), 'nbD' => '1', 'qty' => '1');
-    array_push($_SESSION['cartSnow'], $newSnowLeasing);
+    $sql = "INSERT INTO reservations (vip, price, reservationNumber, days_id) VALUES ('$vip', '$price', '1', '$day')";
+
+    require_once 'model/dbconnector.php';
+    $result = executeQueryIUD($sql);
+
+    return $result;
+}
+
+function getArtists()
+{
+    $sql = "SELECT * FROM artists";
+    require_once "model/dbconnector.php";
+    $artists = executeQuerySelect($sql);
+    return $artists;
 }

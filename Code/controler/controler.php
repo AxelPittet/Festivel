@@ -84,6 +84,8 @@ function register($registerRequest)
 
 function panier()
 {
+    require_once "model/billetsManager.php";
+    $panier = getPanier();
     require "view/panier.php";
 }
 
@@ -110,4 +112,24 @@ function delCart($index)
     array_splice($_SESSION['panier'], $index, 1);
 
     require "view/panier.php";
+}
+
+function buyBillet(){
+    $day = $_GET['day'];
+    $vip = $_GET['vip'];
+    $price = $_GET['price'];
+
+    if ($day = '2021-06-26') {
+        $day = 1;
+    } elseif ($day = '2021-06-27'){
+        $day = 2;
+    } else {
+        $day = [1,2];
+    }
+
+    require_once "model/billetsManager.php";
+    $result = addBilletBD($day, $vip, $price);
+
+    panier();
+
 }

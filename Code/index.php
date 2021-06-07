@@ -33,6 +33,9 @@ if (isset($_GET['action'])) {
         case 'delCart' :
             delCart($_GET['key']);
             break;
+        case 'buyBillet' :
+            buyBillet();
+            break;
         default :
             home();
     }
