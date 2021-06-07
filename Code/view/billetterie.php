@@ -17,10 +17,10 @@ ob_start();
                         <ul id="boxdescription">
                             <li>Billet individuel pour le 26 Juin
                             </li>
-                            <li>Prix :
+                            <li>Prix : 40 CHF
                             </li>
                             <br>
-                            <li><a href="index.php?action=buyBillet&day=2021-06-26&vip=0&price=20&name=Billet individuel pour le 26 Juin"><input id="btnAcheter" type="submit" value="Acheter" class="flex-c-m size10 bg4 bo-rad-23 hov1 m-text3 trans-0-4">
+                            <li><a href="index.php?action=buyBillet&day=2021-06-26&vip=0&price=40&name=Billet individuel pour le 26 Juin"><input id="btnAcheter" type="submit" value="Acheter" class="flex-c-m size10 bg4 bo-rad-23 hov1 m-text3 trans-0-4">
                             </li>
                     </div>
                 </div>
@@ -35,10 +35,10 @@ ob_start();
                         <ul id="boxdescription">
                             <li>Billet individuel pour le 26 Juin
                             </li>
-                            <li>Prix :
+                            <li>Prix : 60 CHF
                             </li>
                             <br>
-                            <li><a href="index.php?action=buyBillet&day=2021-06-26&vip=1&price=30&name=Billet individuel pour le 26 Juin"><input id="btnAcheter" type="submit" value="Acheter" class="flex-c-m size10 bg4 bo-rad-23 hov1 m-text3 trans-0-4">
+                            <li><a href="index.php?action=buyBillet&day=2021-06-26&vip=1&price=60&name=Billet individuel pour le 26 Juin"><input id="btnAcheter" type="submit" value="Acheter" class="flex-c-m size10 bg4 bo-rad-23 hov1 m-text3 trans-0-4">
                             </li>
                     </div>
                 </div>
@@ -53,10 +53,10 @@ ob_start();
                         <ul id="boxdescription">
                             <li>Billet individuel pour le 27 Juin
                             </li>
-                            <li>Prix :
+                            <li>Prix : 40 CHF
                             </li>
                             <br>
-                            <li><a href="index.php?action=buyBillet&day=2021-06-27&vip=0&price=20&name=Billet individuel pour le 27 Juin"><input id="btnAcheter" type="submit" value="Acheter" class="flex-c-m size10 bg4 bo-rad-23 hov1 m-text3 trans-0-4">
+                            <li><a href="index.php?action=buyBillet&day=2021-06-27&vip=0&price=40&name=Billet individuel pour le 27 Juin"><input id="btnAcheter" type="submit" value="Acheter" class="flex-c-m size10 bg4 bo-rad-23 hov1 m-text3 trans-0-4">
                             </li>
                     </div>
                 </div>
@@ -71,10 +71,10 @@ ob_start();
                         <ul id="boxdescription">
                             <li>Billet VIP individuel pour le 27 Juin
                             </li>
-                            <li>Prix :
+                            <li>Prix : 60 CHF
                             </li>
                             <br>
-                            <li><a href="index.php?action=buyBillet&day=2021-06-27&vip=1&price=30&name=Billet individuel pour le 27 Juin"><input id="btnAcheter" type="submit" value="Acheter" class="flex-c-m size10 bg4 bo-rad-23 hov1 m-text3 trans-0-4">
+                            <li><a href="index.php?action=buyBillet&day=2021-06-27&vip=1&price=60&name=Billet individuel pour le 27 Juin"><input id="btnAcheter" type="submit" value="Acheter" class="flex-c-m size10 bg4 bo-rad-23 hov1 m-text3 trans-0-4">
                             </li>
                     </div>
                 </div>
@@ -89,10 +89,10 @@ ob_start();
                         <ul id="boxdescription">
                             <li>Pass individuel pour le 26-27 Juin
                             </li>
-                            <li>Prix :
+                            <li>Prix : 70 CHF
                             </li>
                             <br>
-                            <li><a href="index.php?action=buyBillet&day=2021-06-26/27&vip=0&price=35&name=Pass individuel pour le 26-27 Juin"><input id="btnAcheter" type="submit" value="Acheter" class="flex-c-m size10 bg4 bo-rad-23 hov1 m-text3 trans-0-4">
+                            <li><a href="index.php?action=buyBillet&day=2021-06-26/27&vip=0&price=70&name=Pass individuel pour le 26-27 Juin"><input id="btnAcheter" type="submit" value="Acheter" class="flex-c-m size10 bg4 bo-rad-23 hov1 m-text3 trans-0-4">
                             </li>
                     </div>
                 </div>
@@ -107,10 +107,10 @@ ob_start();
                         <ul id="boxdescription">
                             <li>Pass VIP individuel pour le 26-27 Juin
                             </li>
-                            <li>Prix :
+                            <li>Prix : 100 CHF
                             </li>
                             <br>
-                            <li><a href="index.php?action=buyBillet&day=2021-06-26/27&vip=1&price=50&name=Pass individuel pour le 26-27 Juin"><input id="btnAcheter" type="submit" value="Acheter" class="flex-c-m size10 bg4 bo-rad-23 hov1 m-text3 trans-0-4">
+                            <li><a href="index.php?action=buyBillet&day=2021-06-26/27&vip=1&price=100&name=Pass individuel pour le 26-27 Juin"><input id="btnAcheter" type="submit" value="Acheter" class="flex-c-m size10 bg4 bo-rad-23 hov1 m-text3 trans-0-4">
                             </li>
                     </div>
                 </div>
