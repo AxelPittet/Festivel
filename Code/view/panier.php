@@ -12,27 +12,44 @@ ob_start();
                     <tbody>
                     <tr>
                         <th>Produit</th>
+                        <th>VIP</th>
                         <th>Quantité</th>
                         <th>Prix</th>
                         <th>Date</th>
                     </tr>
                     <?php
+                    $day = '';
+                    $vip = '';
                     foreach ($reservations as $reservation) :
                         foreach ($users as $user) :
-                            if ($user['reservations_id'] == $reservation['id']) :
-                                if ($user['email'] == $_SESSION['userEmailAddress']) : ?>
+                            if ($user['id'] == $reservation['users_id']) :
+                                if ($user['email'] == $_SESSION['userEmailAddress']) :
+                                    if ($reservation['days_id'] == 1) {
+                                        $day = '2021-06-26';
+                                    } elseif ($reservation['days_id'] == 2) {
+                                        $day = '2021-06-27';
+                                    } else {
+                                        $day = '2021-06-26/27';
+                                    }
+                                    if ($reservation['vip'] == 0) {
+                                        $vip = 'Non';
+                                    } else {
+                                        $vip = 'Oui';
+                                    }
+                                    ?>
                                     <tr>
-                                        <td></td>
-                                        <td>1</td>
-                                        <td>80 CHF</td>
-                                        <td>26/06/2021</td>
+                                        <td><?= $reservation['name'] ?></td>
+                                        <td><?= $vip ?></td>
+                                        <td><?= $reservation['quantity'] ?></td>
+                                        <td><?= $reservation['price'] ?> CHF</td>
+                                        <td><?= $day ?></td>
                                         <td>
-                                            <form method="post" action="/panier/del/">
-                                                <input type="hidden" name="date" value="">
+
+                                            <a href="index.php?action=delCart&reservationId=<?= $reservation['id'] ?>">
                                                 <button class="btn btn-secondary" type="submit">
                                                     Supprimer
                                                 </button>
-                                            </form>
+                                            </a>
                                         </td>
                                     </tr>
                                 <?php
@@ -40,27 +57,13 @@ ob_start();
                             endif;
                         endforeach;
                     endforeach; ?>
-                    <!-- <tr>
-                        <td>Billet standard</td>
-                        <td>1</td>
-                        <td>80 CHF</td>
-                        <td>26/06/2021</td>
-                        <td>
-                            <form method="post" action="/panier/del/">
-                                <input type="hidden" name="date" value="">
-                                <button class="btn btn-secondary" type="submit">
-                                    Supprimer
-                                </button>
-                            </form>
-                        </td>
-                    </tr> -->
                     </tbody>
                 </table>
             </div>
         </div>
         <br>
         <br>
-        <form class="text-center" method="post" action="/panier/checkout/">
+        <form class="text-center" method="post" action="">
             <button class="btn btn-secondary" type="submit">Procéder au paiment</button>
         </form>
     </section>

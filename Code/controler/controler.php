@@ -117,20 +117,38 @@ function delCart($index)
 }
 
 function buyBillet(){
+    $name = $_GET['name'];
     $day = $_GET['day'];
     $vip = $_GET['vip'];
     $price = $_GET['price'];
+    $userId = '';
 
-    if ($day = '2021-06-26') {
+    if ($day == '2021-06-26') {
         $day = 1;
-    } elseif ($day = '2021-06-27'){
+    } elseif ($day == '2021-06-27'){
         $day = 2;
     } else {
         $day = [1,2];
     }
 
+    require_once "model/usersManager.php";
+    $users = getUsers();
+
+    foreach ($users as $user) {
+        if ($_SESSION['userEmailAddress'] == $user['email']){
+            $userId = $user['id'];
+        }
+    }
+
     require_once "model/billetsManager.php";
-    $result = addBilletBD($day, $vip, $price);
+    $reservations = getPanier();
+    $reservationNumber = 1;
+    foreach ($reservations as $reservation) {
+        $reservationNumber += 1;
+    }
+
+    require_once "model/billetsManager.php";
+    $result = addBilletBD($name, $day, $vip, $reservationNumber, $price, $userId);
 
     panier();
 
