@@ -36,7 +36,9 @@ ob_start();
                         <h2 class="programme-artist-hours"><?= $concert['startTime'] . " - " . $concert['endTime'] ?></h2>
                     </div>
                 </a>
-                <?php if ($_SESSION["userType"] == 2) ?>
+                <?php if ($_SESSION["userType"] == 2) : ?>
+                <a href="index.php?action=supConcert&concertId=<?= $concert['id'] ?>"><button>Supprimer</button></a>
+                <?php endif;?>
             </td>
             <?php if ($i == 3 || $i == 6) : ?>
         <tr>
@@ -87,6 +89,9 @@ ob_start();
                         <h2 class="programme-artist-hours"><?= $concert['startTime'] . " - " . $concert['endTime'] ?></h2>
                     </div>
                 </a>
+                <?php if ($_SESSION["userType"] == 2) : ?>
+                    <a href="index.php?action=supConcert&concertId=<?= $concert['id'] ?>"><button>Supprimer</button></a>
+                <?php endif;?>
             </td>
             <?php if ($i == 3 || $i == 6) : ?>
         <tr>

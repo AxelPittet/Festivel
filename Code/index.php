@@ -36,6 +36,9 @@ if (isset($_GET['action'])) {
         case 'buyBillet' :
             buyBillet();
             break;
+        case 'supConcert' :
+            supConcert();
+            break;
         default :
             home();
     }

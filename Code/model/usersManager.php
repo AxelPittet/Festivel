@@ -31,7 +31,6 @@ function registerNewAccount($userEmailAddress, $userPsw, $userName, $userFirstNa
     $register = "INSERT INTO users (name, firstname, email, phoneNumber, password, userType) VALUES ('$userName', '$userFirstName', '$userEmailAddress', '$userNumberPhone', '$userPswHash', 1)";
 
     require_once 'model/dbconnector.php';
-    echo $register;
     $registerResult = executeQueryIUD($register);
 
     return $registerResult;

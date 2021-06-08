@@ -156,3 +156,10 @@ function buyBillet(){
     panier();
 
 }
+
+function supConcert(){
+    $concertID = $_GET["concertId"];
+    require_once "model/concertsManager.php";
+    $supConcert = supConcertBDD($concertID);
+    programme();
+}
