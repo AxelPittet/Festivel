@@ -41,8 +41,6 @@ ob_start();
                                         <td><?= $reservation['name'] ?></td>
                                         <td><?= $vip ?></td>
                                         <td><?= $reservation['quantity'] ?></td>
-                                        <td><?= $reservation['price'] ?> CHF</td>
-                                        <td><?= $day ?></td>
                                         <td>
                                             <a href="index.php?action=delCart&reservationId=<?= $reservation['id'] ?>">
                                                 <button class="btn btn-secondary" type="submit"> + </button>
@@ -51,6 +49,8 @@ ob_start();
                                                 <button class="btn btn-secondary" type="submit"> - </button>
                                             </a>
                                         </td>
+                                        <td><?= $reservation['price'] ?> CHF</td>
+                                        <td><?= $day ?></td>
                                         <td>
                                             <a href="index.php?action=delCart&reservationId=<?= $reservation['id'] ?>">
                                                 <button class="btn btn-secondary" type="submit"> Supprimer </button>
