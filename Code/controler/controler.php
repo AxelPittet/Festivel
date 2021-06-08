@@ -7,7 +7,7 @@ function home()
 
 function programme()
 {
-    require "model/concertsManager.php";
+    require_once "model/concertsManager.php";
     $concerts = getConcerts();
     $artists = getArtists();
     $days = getDays();
@@ -161,5 +161,6 @@ function supConcert(){
     $concertID = $_GET["concertId"];
     require_once "model/concertsManager.php";
     $supConcert = supConcertBDD($concertID);
+
     programme();
 }
