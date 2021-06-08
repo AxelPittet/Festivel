@@ -99,7 +99,6 @@ ob_start();
             endforeach; ?>
     </table>
 </section>
-
 <?php
 $content = ob_get_clean();
 require "gabarit.php";
