@@ -1971,3 +1971,8 @@ h3 {
         border-right: 0;
     }
 }
+
+#prog{
+    float: left;
+    width: 60%;
+}
