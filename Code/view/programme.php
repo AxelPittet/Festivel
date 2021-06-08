@@ -1,7 +1,6 @@
 <?php
 ob_start();
 ?>
-<div id="prog">
 <section class="about-us">
     <h3><span>Vendredi 26 Juin</span></h3><br>
 </section>
@@ -100,7 +99,6 @@ ob_start();
             endforeach; ?>
     </table>
 </section>
-</div>
 <?php
 $content = ob_get_clean();
 require "gabarit.php";
