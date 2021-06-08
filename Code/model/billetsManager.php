@@ -6,9 +6,6 @@ function addBilletBD($name, $day, $vip, $reservationNumber, $price, $userId)
 
     require_once 'model/dbconnector.php';
     $result = executeQueryIUD($sql);
-
-    echo $sql;
-
     return $result;
 }
 
