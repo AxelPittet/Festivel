@@ -44,10 +44,10 @@ ob_start();
                                         <td><?= $reservation['price'] ?> CHF</td>
                                         <td><?= $day ?></td>
                                         <td>
-                                            <a href="index.php?action=reservationId=<?= $reservation['id'] ?>&modif=1">
+                                            <a href="index.php?action=qtychange&reservationId=<?= $reservation['id'] ?>&modif=1">
                                                 <button class="btn btn-secondary" type="submit"> + </button>
                                             </a>
-                                            <a href="index.php?action=reservationId=<?= $reservation['id'] ?>&modif=-1">
+                                            <a href="index.php?action=qtychange&reservationId=<?= $reservation['id'] ?>&modif=-1">
                                                 <button class="btn btn-secondary" type="submit"> - </button>
                                             </a>
                                         </td>
