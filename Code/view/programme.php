@@ -25,7 +25,7 @@ ob_start();
         <tr>
             <?php endif; ?>
             <td>
-                <a href="index.php?action=concert&concertId=<?= $concert['id']?>">
+                <a href="index.php?action=concert&concertId=<?= $concert['id'] ?>">
                     <div class="programme-table" style="
                             height: 300px;
                             width: 500px;
@@ -36,6 +36,7 @@ ob_start();
                         <h2 class="programme-artist-hours"><?= $concert['startTime'] . " - " . $concert['endTime'] ?></h2>
                     </div>
                 </a>
+                <?php if ($_SESSION["userType"] == 2) ?>
             </td>
             <?php if ($i == 3 || $i == 6) : ?>
         <tr>
@@ -75,7 +76,7 @@ ob_start();
         <tr>
             <?php endif; ?>
             <td>
-                <a href="index.php?action=concert&concertId=<?= $concert['id']?>">
+                <a href="index.php?action=concert&concertId=<?= $concert['id'] ?>">
                     <div class="programme-table" style="
                             height: 300px;
                             width: 500px;

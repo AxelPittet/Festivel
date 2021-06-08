@@ -50,7 +50,7 @@ function getUserType($userEmailAddress) {
     $result = 1;
 
     $strSeparator = '\'';
-    $getUserTypeQuery = 'SELECT userType FROM users WHERE users.userEmailAddress =' . $strSeparator . $userEmailAddress . $strSeparator;
+    $getUserTypeQuery = 'SELECT userType FROM users WHERE email =' . $strSeparator . $userEmailAddress . $strSeparator;
 
     require_once 'model/dbconnector.php';
     $queryResult = executeQuerySelect($getUserTypeQuery);

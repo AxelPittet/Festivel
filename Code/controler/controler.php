@@ -18,7 +18,7 @@ function programme()
 function createSession($userEmailAddress, $userType)
 {
     $_SESSION['userEmailAddress'] = $userEmailAddress;
-    $_SESSION['$userType'] = $userType;
+    $_SESSION['userType'] = $userType;
 }
 
 function logout()
