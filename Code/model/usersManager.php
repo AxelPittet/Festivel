@@ -44,3 +44,21 @@ function getUsers()
     $users = executeQuerySelect($sql);
     return $users;
 }
+
+
+function getUserType($userEmailAddress) {
+    $result = 1;
+
+    $strSeparator = '\'';
+    $getUserTypeQuery = 'SELECT userType FROM users WHERE users.userEmailAddress =' . $strSeparator . $userEmailAddress . $strSeparator;
+
+    require_once 'model/dbconnector.php';
+    $queryResult = executeQuerySelect($getUserTypeQuery);
+    //echo $getUserTypeQuery;
+
+    if (count($queryResult) == 1) {
+        $result = $queryResult[0]['userType'];
+    }
+
+    return $result;
+}

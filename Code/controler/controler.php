@@ -15,9 +15,10 @@ function programme()
     require "view/programme.php";
 }
 
-function createSession($userEmailAddress)
+function createSession($userEmailAddress, $userType)
 {
     $_SESSION['userEmailAddress'] = $userEmailAddress;
+    $_SESSION['$userType'] = $userType;
 }
 
 function logout()
@@ -36,7 +37,8 @@ function login($loginRequest)
         //try to check if user/psw are matching with the database
         require_once "model/usersManager.php";
         if (isLoginCorrect($userEmailAddress, $userPsw)) {
-            createSession($userEmailAddress);
+            $userType = getUserType($userEmailAddress);
+            createSession($userEmailAddress, $userType);
             $_GET['loginError'] = false;
             require "view/home.php";
         } else { //if the user/psw does not match, login form appears again
@@ -65,7 +67,8 @@ function register($registerRequest)
         if ($userPsw == $userPswRepeat) {
             require_once "model/usersManager.php";
             if (registerNewAccount($userEmailAddress, $userPsw, $userName, $userFirstName, $userNumberPhone)) {
-                createSession($userEmailAddress);
+                $userType = getUserType($userEmailAddress);
+                createSession($userEmailAddress, $userType);
                 $registerErrorMessage = null;
                 require "view/home.php";
             } else {
