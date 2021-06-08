@@ -40,10 +40,13 @@ ob_start();
                                     <tr>
                                         <td><?= $reservation['name'] ?></td>
                                         <td><?= $vip ?></td>
-                                        <td><?= $reservation['quantity'] ?>
+                                        <td>
                                             <a href="index.php?action=qtychange&key=<?= $reservation['id'] ?>&modif=1">
                                                 <button class="btn btn-secondary" type="submit"> + </button>
                                             </a>
+                                        </td>
+                                        <td><?= $reservation['quantity'] ?></td>
+                                        <td>
                                             <a href="index.php?action=qtychange&key=<?= $reservation['id'] ?>&modif=-1">
                                                 <button class="btn btn-secondary" type="submit"> - </button>
                                             </a>
