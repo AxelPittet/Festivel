@@ -12,7 +12,12 @@ function isLoginCorrect($userEmailAddress, $userPsw)
     $queryResult = executeQuerySelect($loginQuery);
 
     if (count($queryResult) == 1) {
-        $result = true;
+        $userHashPsw = $queryResult[0]['userHashPsw'];
+        if (password_verify($userPsw, $userHashPsw) == true) {
+            $result = true;
+        } else {
+            $result = false;
+        }
     } else {
         $result = false;
     }
@@ -23,10 +28,10 @@ function isLoginCorrect($userEmailAddress, $userPsw)
 function registerNewAccount($userEmailAddress, $userPsw, $userName, $userFirstName, $userNumberPhone)
 {
 
-    $register = "INSERT INTO users (name, firstname, email, phoneNumber, password, userType) VALUES ('$userName', '$userFirstName', '$userEmailAddress', '$userNumberPhone', '$userPsw', 1)";
+    $userPswHash = password_hash($userPsw, PASSWORD_DEFAULT);
+    $register = "INSERT INTO users (name, firstname, email, phoneNumber, password, userType) VALUES ('$userName', '$userFirstName', '$userEmailAddress', '$userNumberPhone', '$userPswHash', 1)";
 
     require_once 'model/dbconnector.php';
-    //echo $register;
     $registerResult = executeQueryIUD($register);
 
     return $registerResult;
