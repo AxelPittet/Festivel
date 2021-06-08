@@ -39,3 +39,11 @@ function getScenes()
     return $scenes;
 }
 
+function supConcertBDD($concertID)
+{
+    $sql = "DELETE FROM concerts WHERE id='$concertID'";
+    require_once "model/dbconnector.php";
+    $delConcerts = executeQuerySelect($sql);
+    return $delConcerts;
+}
+
