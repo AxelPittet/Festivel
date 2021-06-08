@@ -8,7 +8,6 @@ function isLoginCorrect($userEmailAddress, $userPsw)
     $loginQuery = 'SELECT * FROM users WHERE email = ' . $strSeparator . $userEmailAddress . $strSeparator;
 
     require_once 'model/dbConnector.php';
-    echo $loginQuery;
     $queryResult = executeQuerySelect($loginQuery);
 
     if (count($queryResult) == 1) {
