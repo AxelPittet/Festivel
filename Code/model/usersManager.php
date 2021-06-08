@@ -29,7 +29,7 @@ function registerNewAccount($userEmailAddress, $userPsw, $userName, $userFirstNa
 {
 
     $userPswHash = password_hash($userPsw, PASSWORD_DEFAULT);
-    $register = "INSERT INTO users (name, firstname, email, phoneNumber, password, userType, reservations_id) VALUES ('$userName', '$userFirstName', '$userEmailAddress', '$userNumberPhone', '$userPswHash', 1, 0)";
+    $register = "INSERT INTO users (name, firstname, email, phoneNumber, password, userType) VALUES ('$userName', '$userFirstName', '$userEmailAddress', '$userNumberPhone', '$userPswHash', 1)";
 
     require_once 'model/dbconnector.php';
     $registerResult = executeQueryIUD($register);

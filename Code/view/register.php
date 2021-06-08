@@ -3,7 +3,7 @@ ob_start();
 ?>
 
 <section id="" class="about-us">
-			
+
 									<div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-6 col-md-6" id="divTexteRegister">
@@ -21,23 +21,23 @@ ob_start();
                             <h3><strong>S'inscrire</strong></h3><br>
                             <form class="form" action="index.php?action=register" method="post">
                                 <div class="col-md-12 form-group p_star">
-                                    <label for="userName"><b>Nom</b></label><input id="bordureTexte" type="name" class="form-control" placeholder="Nom" name="inputUserName" required>
+                                    <label for="inputUserName"><b>Nom</b></label><input id="bordureTexte" type="text" class="form-control" placeholder="Nom" name="inputUserName" required>
                                 </div>
                                 <div class="col-md-12 form-group p_star">
-                                    <label for="userFirstName"><b>Prénom</b></label><input id="bordureTexte" type="firstName" class="form-control" placeholder="Prénom" name="inputFirstName" required>
+                                    <label for="inputFirstName"><b>Prénom</b></label><input id="bordureTexte" type="text" class="form-control" placeholder="Prénom" name="inputFirstName" required>
                                 </div>
                                 <div class="col-md-12 form-group p_star">
-                                    <label for="userNumberPhone"><b>Numéro de téléphone</b></label><input id="bordureTexte" type="NumberPhone" class="form-control" placeholder="Numéro de téléphone" name="inputUserNumberPhone" required>
+                                    <label for="inputUserNumberPhone"><b>Numéro de téléphone</b></label><input id="bordureTexte" type="tel" class="form-control" placeholder="Numéro de téléphone" name="inputUserNumberPhone" required>
                                 </div>
                                 <div class="col-md-12 form-group p_star">
-                                    <label for="userEmail"><b>Adresse email</b></label><input id="bordureTexte" type="email" class="form-control" placeholder="Email address" name="inputUserEmailAddress" required>
+                                    <label for="inputUserEmailAddress"><b>Adresse email</b></label><input id="bordureTexte" type="email" class="form-control" placeholder="Email address" name="inputUserEmailAddress" required>
                                 </div>
                                 <div class="col-md-12 form-group p_star">
-                                    <label for="userPsw"><b>Mot de passe</b></label><input id="bordureTexte" type="password" class="form-control" id="password" name="inputUserPsw" value=""
+                                    <label for="inputUserPsw"><b>Mot de passe</b></label><input id="bordureTexte" type="password" class="form-control" id="password" name="inputUserPsw" value=""
                                            placeholder="Mot de passe">
                                 </div>
                                 <div class="col-md-12 form-group p_star">
-                                    <label for="psw-repeat"><b>Vérifier le mot de passe</b></label><input id="bordureTexte" type="password" class="form-control" id="password" name="inputUserPswRepeat" value=""
+                                    <label for="inputUserPswRepeat"><b>Vérifier le mot de passe</b></label><input id="bordureTexte" type="password" class="form-control" id="password" name="inputUserPswRepeat" value=""
                                                                                            placeholder="Mot de passe(vérification)">
                                 </div>
                                 <div class="col-md-12 form-group">
@@ -50,7 +50,7 @@ ob_start();
             </div>
         </div>
     </section>
-									
+
 </section>
 
 <?php
