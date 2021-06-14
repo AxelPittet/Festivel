@@ -6,55 +6,53 @@ ob_start();
     <h3><span>Vendredi 26 Juin</span></h3><br>
 </section>
 <?php if ($_SESSION["userType"] == 2) : ?>
-    <a href="index.php?action=formConcert"><button>Ajouter</button></a>
-<?php endif;?>
+    <a href="index.php?action=formConcert">
+        <button>Ajouter</button>
+    </a>
+<?php endif; ?>
 <section class="about-us-content">
-    <table class="table-responsive col-lg-6">
-        <?php
-        $i = 0;
-        foreach ($concerts
-
-        as $concert):
-        foreach ($artists
-
-        as $artist):
-        if ($concert['artist_id'] == $artist['id']):
-        foreach ($days
-
-        as $day):
-        if ($concert['days_id'] == $day['id']):
-        if ($day['date'] == '2021-06-26'):
-        $i++;
-        if ($i == 4 || $i == 7): ?>
-        <tr>
-            <?php endif; ?>
-            <td>
-                <a href="index.php?action=concert&concertId=<?= $concert['id'] ?>">
-                    <div class="programme-table" style="
-                            height: 300px;
-                            width: 500px;
-                            background-image: url('/view/content/images/artistes/<?= $artist['picture'] ?>');
-                            background-size: 500px 300px">
-
-                        <h2 class="programme-artist-name"><?= $artist['artistName'] ?></h2>
-                        <h2 class="programme-artist-hours"><?= $concert['startTime'] . " - " . $concert['endTime'] ?></h2>
-                    </div>
-                </a>
-                <?php if ($_SESSION["userType"] == 2) : ?>
-                <a href="index.php?action=supConcert&concertId=<?= $concert['id'] ?>"><button>Supprimer</button></a>
-                <?php endif;?>
-            </td>
-            <?php if ($i == 3 || $i == 6) : ?>
-        <tr>
+    <div class="container svcs-container">
+        <div class="row">
             <?php
-            endif;
-            endif;
-            endif;
-            endforeach;
-            endif;
-            endforeach;
+            foreach ($concerts
+
+                     as $concert):
+                foreach ($artists
+
+                         as $artist):
+                    if ($concert['artist_id'] == $artist['id']):
+                        foreach ($days
+
+                                 as $day):
+                            if ($concert['days_id'] == $day['id']):
+                                if ($day['date'] == '2021-06-26'):?>
+                                    <div class="col-sm-6">
+                                        <a href="index.php?action=concert&concertId=<?= $concert['id'] ?>">
+                                            <div class="programme-table" style="
+                                                    height: 300px;
+                                                    width: 500px;
+                                                    background-image: url('/view/content/images/artistes/<?= $artist['picture'] ?>');
+                                                    background-size: 500px 300px">
+
+                                                <h2 class="programme-artist-name"><?= $artist['artistName'] ?></h2>
+                                                <h2 class="programme-artist-hours"><?= $concert['startTime'] . " - " . $concert['endTime'] ?></h2>
+                                            </div>
+                                        </a>
+                                        <?php if ($_SESSION["userType"] == 2) : ?>
+                                            <a href="index.php?action=supConcert&concertId=<?= $concert['id'] ?>">
+                                                <button>Supprimer</button>
+                                            </a>
+                                        <?php endif; ?>
+                                    </div>
+                                <?php
+                                endif;
+                            endif;
+                        endforeach;
+                    endif;
+                endforeach;
             endforeach; ?>
-    </table>
+        </div>
+    </div>
 </section>
 
 
@@ -62,52 +60,48 @@ ob_start();
     <h3><span>Samedi 27 Juin</span></h3><br>
 </section>
 <section class="about-us-content">
-    <table class="table-responsive col-lg-6">
-        <?php
-        $i = 0;
-        foreach ($concerts
-
-        as $concert):
-        foreach ($artists
-
-        as $artist):
-        if ($concert['artist_id'] == $artist['id']):
-        foreach ($days
-
-        as $day):
-        if ($concert['days_id'] == $day['id']):
-        if ($day['date'] == '2021-06-27'):
-        $i++;
-        if ($i == 4 || $i == 7): ?>
-        <tr>
-            <?php endif; ?>
-            <td>
-                <a href="index.php?action=concert&concertId=<?= $concert['id'] ?>">
-                    <div class="programme-table" style="
-                            height: 300px;
-                            width: 500px;
-                            background-image: url('/view/content/images/artistes/<?= $artist['picture'] ?>');
-                            background-size: 500px 300px">
-
-                        <h2 class="programme-artist-name"><?= $artist['artistName'] ?></h2>
-                        <h2 class="programme-artist-hours"><?= $concert['startTime'] . " - " . $concert['endTime'] ?></h2>
-                    </div>
-                </a>
-                <?php if ($_SESSION["userType"] == 2) : ?>
-                    <a href="index.php?action=supConcert&concertId=<?= $concert['id'] ?>"><button>Supprimer</button></a>
-                <?php endif;?>
-            </td>
-            <?php if ($i == 3 || $i == 6) : ?>
-        <tr>
+    <div class="container svcs-container">
+        <div class="row">
             <?php
-            endif;
-            endif;
-            endif;
-            endforeach;
-            endif;
-            endforeach;
+            foreach ($concerts
+
+                     as $concert):
+                foreach ($artists
+
+                         as $artist):
+                    if ($concert['artist_id'] == $artist['id']):
+                        foreach ($days
+
+                                 as $day):
+                            if ($concert['days_id'] == $day['id']):
+                                if ($day['date'] == '2021-06-27'):?>
+                                    <div class="col-sm-6">
+                                        <a href="index.php?action=concert&concertId=<?= $concert['id'] ?>">
+                                            <div class="programme-table" style="
+                                                    height: 300px;
+                                                    width: 500px;
+                                                    background-image: url('/view/content/images/artistes/<?= $artist['picture'] ?>');
+                                                    background-size: 500px 300px">
+
+                                                <h2 class="programme-artist-name"><?= $artist['artistName'] ?></h2>
+                                                <h2 class="programme-artist-hours"><?= $concert['startTime'] . " - " . $concert['endTime'] ?></h2>
+                                            </div>
+                                        </a>
+                                        <?php if ($_SESSION["userType"] == 2) : ?>
+                                            <a href="index.php?action=supConcert&concertId=<?= $concert['id'] ?>">
+                                                <button>Supprimer</button>
+                                            </a>
+                                        <?php endif; ?>
+                                    </div>
+                                <?php
+                                endif;
+                            endif;
+                        endforeach;
+                    endif;
+                endforeach;
             endforeach; ?>
-    </table>
+        </div>
+    </div>
 </section>
 <?php
 $content = ob_get_clean();
