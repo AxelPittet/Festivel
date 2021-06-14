@@ -17,7 +17,7 @@ function getPanier(){
 
 function supCartBDD($reservationID)
 {
-    $sql = "DELETE FROM reservation WHERE id='$reservationID'";
+    $sql = "DELETE FROM reservations WHERE id='$reservationID'";
     require_once "model/dbconnector.php";
     $delCart = executeQuerySelect($sql);
     return $delCart;
