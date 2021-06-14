@@ -118,7 +118,7 @@ function delCart(){
     require_once "model/billetsManager.php";
     $delCart = supCartBDD($reservationId);
 
-    programme();
+    require "view/panier.php";
 }
 
 function buyBillet(){
