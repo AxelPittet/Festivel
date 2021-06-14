@@ -112,12 +112,7 @@ function concert()
     require "view/concert.php";
 }
 
-function delCart($index)
-{
-    array_splice($_SESSION['panier'], $index, 1);
 
-    require "view/panier.php";
-}
 
 function buyBillet(){
     $name = $_GET['name'];
@@ -164,3 +159,10 @@ function supConcert(){
 
     programme();
 }
+
+function delCart(){
+    $reservationId = $_GET["reservationID"];
+    require_once "model/billetsManager.php";
+    $delCart = supCartBDD($reservationId);
+}
+

@@ -15,4 +15,10 @@ function getPanier(){
     return $reservations;
 }
 
-
+function supCartBDD($reservationID)
+{
+    $sql = "DELETE FROM reservation WHERE id='$reservationID'";
+    require_once "model/dbconnector.php";
+    $delCart = executeQuerySelect($sql);
+    return $delCart;
+}
