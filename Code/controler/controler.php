@@ -166,12 +166,6 @@ function supConcert()
     programme();
 }
 
-function delCart(){
-    $reservationId = $_GET["reservationID"];
-    require_once "model/billetsManager.php";
-    $delCart = supCartBDD($reservationId);
-}
-
 function addConcert()
 {
     $concertID = $_GET["concertId"];
