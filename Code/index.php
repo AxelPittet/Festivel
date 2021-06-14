@@ -39,6 +39,12 @@ if (isset($_GET['action'])) {
         case 'supConcert' :
             supConcert();
             break;
+        case 'formConcert' :
+            formConcert();
+            break;
+        case 'addConcert' :
+            addConcert();
+            break;
         default :
             home();
     }

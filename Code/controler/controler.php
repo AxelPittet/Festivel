@@ -113,6 +113,11 @@ function concert()
 }
 
 
+function delCart(){
+    $reservationId = $_GET["reservationID"];
+    require_once "model/billetsManager.php";
+    $delCart = supCartBDD($reservationId);
+}
 
 function buyBillet(){
     $name = $_GET['name'];
@@ -152,7 +157,8 @@ function buyBillet(){
 
 }
 
-function supConcert(){
+function supConcert()
+{
     $concertID = $_GET["concertId"];
     require_once "model/concertsManager.php";
     $supConcert = supConcertBDD($concertID);
@@ -166,3 +172,16 @@ function delCart(){
     $delCart = supCartBDD($reservationId);
 }
 
+function addConcert()
+{
+    $concertID = $_GET["concertId"];
+    require_once "model/concertsManager.php";
+    $addConcert = addConcertBDD($concertID);
+
+    programme();
+}
+
+function formConcert()
+{
+    require "view/formConcert";
+}

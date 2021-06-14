@@ -1,9 +1,13 @@
 <?php
 ob_start();
 ?>
+
 <section class="about-us">
     <h3><span>Vendredi 26 Juin</span></h3><br>
 </section>
+<?php if ($_SESSION["userType"] == 2) : ?>
+    <a href="index.php?action=formConcert"><button>Ajouter</button></a>
+<?php endif;?>
 <section class="about-us-content">
     <table class="table-responsive col-lg-6">
         <?php

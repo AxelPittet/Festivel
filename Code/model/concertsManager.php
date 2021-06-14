@@ -47,3 +47,11 @@ function supConcertBDD($concertID)
     return $delConcerts;
 }
 
+function addConcertBDD($concertID)
+{
+    $sql = "INSERT INTO concerts ('startTime', 'endTime', 'artist_id', 'days_id') VALUES ()";
+    require_once "model/dbconnector.php";
+    $addConcerts = executeQuerySelect($sql);
+    return $addConcerts;
+}
+
