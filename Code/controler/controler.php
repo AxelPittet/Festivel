@@ -114,7 +114,7 @@ function concert()
 
 
 function delCart(){
-    $reservationId = $_GET["reservationID"];
+    $reservationId = $_GET['reservationId'];
     require_once "model/billetsManager.php";
     $delCart = supCartBDD($reservationId);
 
