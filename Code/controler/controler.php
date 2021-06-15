@@ -206,18 +206,26 @@ function buyBillet(){
 }
 
 function confirmCart(){
-    $userId = $_GET['userId'];
+    $userEmailAddress = $_GET['userEmailAddress'];
 
+    require_once "model/billetsManager.php";
     $reservations = getPanier();
+    require_once "model/usersManager.php";
+    $users = getUsers();
     foreach ($reservations as $reservation) {
-        if ($reservation['users_id'] == $userId) {
-            if ($reservation['days_id'] == 1) {
-                $day = '2021-06-26';
-            } else {
-                $day = '2021-06-27';
+        foreach ($users as $user) {
+            if ($user['email'] == $userEmailAddress) {
+                if ($reservation['users_id'] == $user['id']) {
+                    if ($reservation['days_id'] == 1) {
+                        $day = '2021-06-26';
+                    } else {
+                        $day = '2021-06-27';
+                    }
+                    require_once "model/billetsManager.php";
+                    confirmCartBD($reservation['name'], $reservation['vip'], $reservation['price'], $reservation['reservationNumber'], $day, $user['email']);
+                    $orders = supCartBDD($reservation['id']);
+                }
             }
-            $orders = confirmCartBD($reservation['name'], $reservation['vip'], $reservation['price'], $reservation['reservationNumber'], $day, $userId);
-            $orders = supCartBDD($reservation['id']);
         }
     }
 

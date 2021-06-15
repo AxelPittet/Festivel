@@ -21,14 +21,13 @@ function supCartBDD($reservationID)
 {
     $sql = "DELETE FROM reservations WHERE  id = '$reservationID'";
     require_once "model/dbconnector.php";
-    $delCart = executeQuerySelect($sql);
+    $delCart = executeQueryIUD($sql);
     return $delCart;
 }
 
-function confirmCartBD($name, $vip, $price, $reservationNumber, $day, $userId)
+function confirmCartBD($name, $vip, $price, $orderNumber, $day, $userEmailAddress)
 {
-    $sql = "INSERT INTO orders (name, vip, price, reservationNumber, day, user) VALUES ('$name', '$vip', '$price', '$reservationNumber', '$day', '$userId')";
+    $sql = "INSERT INTO orders (name, vip, price, orderNumber, day, userEmailAddress) VALUES ('$name', '$vip', '$price', '$orderNumber', '$day', '$userEmailAddress')";
     require_once "model/dbconnector.php";
-    $orders = executeQuerySelect($sql);
-    return $orders;
+    $orders = executeQueryIUD($sql);
 }

@@ -68,7 +68,7 @@ ob_start();
         </div>
         <br>
         <br>
-        <a href="index.php?action=confirmCart&userId=<?= $reservation['users_id'] ?>"><button class="btn btn-secondary" type="submit">Procéder au paiment</button></a>
+        <a href="index.php?action=confirmCart&userEmailAddress=<?= $_SESSION['userEmailAddress'] ?>"><button class="btn btn-secondary" type="submit">Procéder au paiment</button></a>
     </section>
 
 
