@@ -26,7 +26,7 @@ function logout()
     session_destroy();
     require "view/home.php";
 }
-// Fonction qui permet de connecter avec un les informations d'un utilisateurs déjà créé
+
 function login($loginRequest)
 {
 //if a login request was submitted
@@ -49,7 +49,7 @@ function login($loginRequest)
         require "view/login.php";
     }
 }
-// Fonction qui permet de créer un nouvel utilisateur
+
 function register($registerRequest)
 {
 //if a register request was submitted
@@ -93,7 +93,7 @@ function panier()
     $users = getUsers();
     require "view/panier.php";
 }
-// Fonction qui permet d'afficher la billetterie
+
 function billetterie()
 {
     require "view/billetterie.php";
@@ -112,7 +112,7 @@ function concert()
     require "view/concert.php";
 }
 
-// Fonction qui permet de suprrimer un article dans le panier
+
 function delCart(){
     $reservationId = $_GET['reservationId'];
     require_once "model/billetsManager.php";
