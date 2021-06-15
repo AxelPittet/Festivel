@@ -1,55 +1,14 @@
 <?php
 
+// Fonction qui permet d'afficher la page "home"
 function home()
 {
     require "view/home.php";
 }
 
-function programme()
-{
-    require_once "model/concertsManager.php";
-    $concerts = getConcerts();
-    $artists = getArtists();
-    $days = getDays();
+//------------------------------------- Register - Login -------------------------------------//
 
-    require "view/programme.php";
-}
-
-function createSession($userEmailAddress, $userType)
-{
-    $_SESSION['userEmailAddress'] = $userEmailAddress;
-    $_SESSION['userType'] = $userType;
-}
-
-function logout()
-{
-    session_destroy();
-    require "view/home.php";
-}
-
-function login($loginRequest)
-{
-//if a login request was submitted
-    if (isset($loginRequest['inputUserEmailAddress']) && isset($loginRequest['inputUserPsw'])) {
-        //extract login parameters
-        $userEmailAddress = $loginRequest['inputUserEmailAddress'];
-        $userPsw = $loginRequest['inputUserPsw'];
-        //try to check if user/psw are matching with the database
-        require_once "model/usersManager.php";
-        if (isLoginCorrect($userEmailAddress, $userPsw)) {
-            $userType = getUserType($userEmailAddress);
-            createSession($userEmailAddress, $userType);
-            $_GET['loginError'] = false;
-            require "view/home.php";
-        } else { //if the user/psw does not match, login form appears again
-            $_GET['loginError'] = true;
-            require "view/login.php";
-        }
-    } else { //the user does not yet fill the form
-        require "view/login.php";
-    }
-}
-
+// Fonction qui permet de créer un nouvel utilisateur
 function register($registerRequest)
 {
 //if a register request was submitted
@@ -85,6 +44,60 @@ function register($registerRequest)
     }
 }
 
+// Fonction qui permet de connecter avec un les informations d'un utilisateurs déjà créé
+function login($loginRequest)
+{
+//if a login request was submitted
+    if (isset($loginRequest['inputUserEmailAddress']) && isset($loginRequest['inputUserPsw'])) {
+        //extract login parameters
+        $userEmailAddress = $loginRequest['inputUserEmailAddress'];
+        $userPsw = $loginRequest['inputUserPsw'];
+        //try to check if user/psw are matching with the database
+        require_once "model/usersManager.php";
+        if (isLoginCorrect($userEmailAddress, $userPsw)) {
+            $userType = getUserType($userEmailAddress);
+            createSession($userEmailAddress, $userType);
+            $_GET['loginError'] = false;
+            require "view/home.php";
+        } else { //if the user/psw does not match, login form appears again
+            $_GET['loginError'] = true;
+            require "view/login.php";
+        }
+    } else { //the user does not yet fill the form
+        require "view/login.php";
+    }
+}
+
+// Fonction qui permet de se déconnecter de la session ouverte
+function logout()
+{
+    session_destroy();
+    require "view/home.php";
+}
+
+// Fonction qui permet de créer une nouvelle session
+function createSession($userEmailAddress, $userType)
+{
+    $_SESSION['userEmailAddress'] = $userEmailAddress;
+    $_SESSION['userType'] = $userType;
+}
+
+//------------------------------------- Programme -------------------------------------//
+
+// Fonction qui permet de d'afficher le programme
+function programme()
+{
+    require_once "model/concertsManager.php";
+    $concerts = getConcerts();
+    $artists = getArtists();
+    $days = getDays();
+
+    require "view/programme.php";
+}
+
+//------------------------------------- Pannier -------------------------------------//
+
+// Fonction qui permet de d'afficher le pannier
 function panier()
 {
     require_once "model/billetsManager.php";
@@ -94,11 +107,9 @@ function panier()
     require "view/panier.php";
 }
 
-function billetterie()
-{
-    require "view/billetterie.php";
-}
+//------------------------------------- Concert -------------------------------------//
 
+// Fonction qui permet de d'afficher les concerts
 function concert()
 {
     $concertId = $_GET['concertId'];
@@ -112,15 +123,50 @@ function concert()
     require "view/concert.php";
 }
 
-
+// Fonction qui permet de suprrimer un article dans le panier
 function delCart(){
     $reservationId = $_GET['reservationId'];
     require_once "model/billetsManager.php";
     $delCart = supCartBDD($reservationId);
 
-   panier();
+    panier();
 }
 
+// Fonction qui permet de supprimer un concert dans la base de données
+function supConcert()
+{
+    $concertID = $_GET["concertId"];
+    require_once "model/concertsManager.php";
+    $supConcert = supConcertBDD($concertID);
+
+    programme();
+}
+
+// Fonction qui permet d'ajouter un concert dans la base de données
+function addConcert()
+{
+    $concertID = $_GET["concertId"];
+    require_once "model/concertsManager.php";
+    $addConcert = addConcertBDD($concertID);
+
+    programme();
+}
+
+// Fonction qui permet d'afficher le formulaire des concerts
+function formConcert()
+{
+    require "view/formConcert";
+}
+
+//------------------------------------- Billetterie -------------------------------------//
+
+// Fonction qui permet d'afficher la billetterie
+function billetterie()
+{
+    require "view/billetterie.php";
+}
+
+// Fonction qui permet de d'ajouter des billets au pannier (et sont écrit dans la BDD)
 function buyBillet(){
     $name = $_GET['name'];
     $day = $_GET['day'];
@@ -157,27 +203,4 @@ function buyBillet(){
 
     panier();
 
-}
-
-function supConcert()
-{
-    $concertID = $_GET["concertId"];
-    require_once "model/concertsManager.php";
-    $supConcert = supConcertBDD($concertID);
-
-    programme();
-}
-
-function addConcert()
-{
-    $concertID = $_GET["concertId"];
-    require_once "model/concertsManager.php";
-    $addConcert = addConcertBDD($concertID);
-
-    programme();
-}
-
-function formConcert()
-{
-    require "view/formConcert";
 }
