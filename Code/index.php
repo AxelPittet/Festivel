@@ -45,6 +45,9 @@ if (isset($_GET['action'])) {
         case 'addConcert' :
             addConcert();
             break;
+        case 'confirmCart' :
+            confirmCart();
+            break;
         default :
             home();
     }

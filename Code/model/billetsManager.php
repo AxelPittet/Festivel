@@ -22,3 +22,13 @@ function supCartBDD($reservationID)
     $delCart = executeQuerySelect($sql);
     return $delCart;
 }
+
+function confirmCartBD($name, $vip, $price, $reservationNumber, $day, $userId) {
+
+
+
+    $sql = "INSERT INTO orders (name, vip, price, reservationNumber, day, user) VALUES ('$name', '$vip', '$price', '$reservationNumber', '$day', '$userId')";
+    require_once "model/dbconnector.php";
+    $orders = executeQuerySelect($sql);
+    return $orders;
+}

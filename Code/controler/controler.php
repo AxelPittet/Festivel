@@ -204,3 +204,20 @@ function buyBillet(){
     panier();
 
 }
+
+function confirmCart(){
+    $userId = $_GET['userId'];
+
+    $reservations = getPanier();
+    foreach ($reservations as $reservation) {
+        if ($reservation['users_id'] == $userId) {
+            if ($reservation['days_id'] == 1) {
+                $day = '2021-06-26';
+            } else {
+                $day = '2021-06-27';
+            }
+            $orders = confirmCartBD($reservation['name'], $reservation['vip'], $reservation['price'], $reservation['reservationNumber'], $day, $userId);
+        }
+    }
+    require "view/home.php";
+}
