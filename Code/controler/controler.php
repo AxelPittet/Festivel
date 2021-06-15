@@ -217,7 +217,10 @@ function confirmCart(){
                 $day = '2021-06-27';
             }
             $orders = confirmCartBD($reservation['name'], $reservation['vip'], $reservation['price'], $reservation['reservationNumber'], $day, $userId);
+            $orders = supCartBDD($reservation['id']);
         }
     }
+
+
     require "view/home.php";
 }
