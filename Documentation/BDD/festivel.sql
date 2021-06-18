@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3308
--- Généré le :  lun. 14 juin 2021 à 11:41
+-- Généré le :  ven. 18 juin 2021 à 09:04
 -- Version du serveur :  5.7.21
 -- Version de PHP :  5.6.35
 
@@ -146,6 +146,34 @@ INSERT INTO `days` (`id`, `date`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Structure de la table `orders`
+--
+
+DROP TABLE IF EXISTS `orders`;
+CREATE TABLE IF NOT EXISTS `orders` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(100) NOT NULL,
+  `vip` tinyint(4) NOT NULL,
+  `price` decimal(45,0) NOT NULL,
+  `orderNumber` decimal(45,0) NOT NULL,
+  `day` varchar(45) NOT NULL,
+  `userEmailAddress` varchar(45) NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `orderNumber` (`orderNumber`)
+) ENGINE=InnoDB AUTO_INCREMENT=22 DEFAULT CHARSET=latin1;
+
+--
+-- Déchargement des données de la table `orders`
+--
+
+INSERT INTO `orders` (`id`, `name`, `vip`, `price`, `orderNumber`, `day`, `userEmailAddress`) VALUES
+(12, 'Billet individuel pour le 26 Juin', 0, '40', '1', '2021-06-26', 'axel.pittet@cpnv.ch'),
+(13, 'Billet individuel pour le 26 Juin', 0, '40', '2', '2021-06-26', 'axel.pittet@cpnv.ch'),
+(16, 'Billet individuel pour le 26 Juin', 1, '60', '3', '2021-06-26', 'axel.pittet@cpnv.ch');
+
+-- --------------------------------------------------------
+
+--
 -- Structure de la table `reservations`
 --
 
@@ -162,29 +190,7 @@ CREATE TABLE IF NOT EXISTS `reservations` (
   UNIQUE KEY `reservationNumber` (`reservationNumber`),
   KEY `fk_reservations_days1_idx` (`days_id`),
   KEY `fk_reservations_users1_idx` (`users_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=56 DEFAULT CHARSET=latin1;
-
---
--- Déchargement des données de la table `reservations`
---
-
-INSERT INTO `reservations` (`id`, `name`, `vip`, `price`, `reservationNumber`, `days_id`, `users_id`) VALUES
-(55, 'Billet individuel pour le 26 Juin', 1, '60', '16', 1, 3),
-(54, 'Billet individuel pour le 26 Juin', 0, '40', '15', 1, 1),
-(53, 'Billet individuel pour le 26 Juin', 0, '40', '14', 1, 1),
-(52, 'Billet individuel pour le 26 Juin', 0, '40', '13', 1, 1),
-(51, 'Billet individuel pour le 26 Juin', 0, '40', '12', 1, 2),
-(50, 'Billet individuel pour le 27 Juin', 0, '40', '11', 2, 2),
-(49, 'Billet individuel pour le 26 Juin', 1, '60', '10', 1, 2),
-(48, 'Billet individuel pour le 26 Juin', 1, '60', '9', 1, 14),
-(47, 'Billet individuel pour le 26 Juin', 1, '60', '8', 1, 15),
-(46, 'Billet individuel pour le 26 Juin', 1, '60', '7', 1, 13),
-(45, 'Billet individuel pour le 26 Juin', 1, '60', '6', 1, 13),
-(44, 'Billet individuel pour le 26 Juin', 1, '60', '5', 1, 13),
-(43, 'Billet individuel pour le 26 Juin', 0, '40', '4', 1, 13),
-(42, 'Billet individuel pour le 26 Juin', 1, '60', '3', 1, 14),
-(41, 'Billet individuel pour le 26 Juin', 1, '60', '2', 1, 14),
-(40, 'Billet individuel pour le 26 Juin', 1, '60', '1', 1, 3);
+) ENGINE=MyISAM AUTO_INCREMENT=99 DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
