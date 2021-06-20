@@ -31,7 +31,7 @@ if (isset($_GET['action'])) {
             concert();
             break;
         case 'delCart' :
-                delCart();
+            delCart();
             break;
         case 'buyBillet' :
             buyBillet();
@@ -39,11 +39,8 @@ if (isset($_GET['action'])) {
         case 'supConcert' :
             supConcert();
             break;
-        case 'formConcert' :
-            formConcert();
-            break;
         case 'addConcert' :
-            addConcert();
+            addConcert($_POST);
             break;
         case 'confirmCart' :
             confirmCart();

@@ -9,6 +9,9 @@ function home()
 //------------------------------------- Register - Login -------------------------------------//
 
 // Fonction qui permet de créer un nouvel utilisateur
+/**
+ * @param array $registerRequest
+ */
 function register($registerRequest)
 {
 //if a register request was submitted
@@ -45,6 +48,9 @@ function register($registerRequest)
 }
 
 // Fonction qui permet de connecter avec un les informations d'un utilisateurs déjà créé
+/**
+ * @param array $loginRequest
+ */
 function login($loginRequest)
 {
 //if a login request was submitted
@@ -72,7 +78,7 @@ function login($loginRequest)
 function logout()
 {
     session_destroy();
-    require "view/home.php";
+    header('LOCATION:/home');
 }
 
 // Fonction qui permet de créer une nouvelle session
@@ -95,9 +101,9 @@ function programme()
     require "view/programme.php";
 }
 
-//------------------------------------- Pannier -------------------------------------//
+//------------------------------------- Panier -------------------------------------//
 
-// Fonction qui permet de d'afficher le pannier
+// Fonction qui permet de d'afficher le panier
 function panier()
 {
     require_once "model/billetsManager.php";
@@ -105,6 +111,16 @@ function panier()
     require_once "model/usersManager.php";
     $users = getUsers();
     require "view/panier.php";
+}
+
+// Fonction qui permet de suprrimer un article dans le panier
+function delCart()
+{
+    $reservationId = $_GET['reservationId'];
+    require_once "model/billetsManager.php";
+    $delCart = supCartBDD($reservationId);
+
+    panier();
 }
 
 //------------------------------------- Concert -------------------------------------//
@@ -123,14 +139,6 @@ function concert()
     require "view/concert.php";
 }
 
-// Fonction qui permet de suprrimer un article dans le panier
-function delCart(){
-    $reservationId = $_GET['reservationId'];
-    require_once "model/billetsManager.php";
-    $delCart = supCartBDD($reservationId);
-
-    panier();
-}
 
 // Fonction qui permet de supprimer un concert dans la base de données
 function supConcert()
@@ -143,19 +151,23 @@ function supConcert()
 }
 
 // Fonction qui permet d'ajouter un concert dans la base de données
-function addConcert()
+/**
+ * @param $concertRequest
+ */
+function addConcert($concertRequest)
 {
-    $concertID = $_GET["concertId"];
-    require_once "model/concertsManager.php";
-    $addConcert = addConcertBDD($concertID);
+    if (!isset($concertRequest['inputStartTime'])) {
+        require "view/formConcert.php";
+    } else {
+        $startTime = $concertRequest['inputStartTime'];
+        $endTime = $concertRequest['inputEndTime'];
+        $artistID = $concertRequest['inputArtistID'];
+        $dayID = $concertRequest['inputDaysID'];
 
-    programme();
-}
-
-// Fonction qui permet d'afficher le formulaire des concerts
-function formConcert()
-{
-    require "view/formConcert";
+        require_once "model/concertsManager.php";
+        addConcertBDD($startTime, $endTime, $artistID, $dayID);
+        programme();
+    }
 }
 
 //------------------------------------- Billetterie -------------------------------------//
@@ -167,7 +179,8 @@ function billetterie()
 }
 
 // Fonction qui permet de d'ajouter des billets au pannier (et sont écrit dans la BDD)
-function buyBillet(){
+function buyBillet()
+{
     $name = $_GET['name'];
     $day = $_GET['day'];
     $vip = $_GET['vip'];
@@ -176,17 +189,17 @@ function buyBillet(){
 
     if ($day == '2021-06-26') {
         $day = 1;
-    } elseif ($day == '2021-06-27'){
+    } elseif ($day == '2021-06-27') {
         $day = 2;
     } else {
-        $day = [1,2];
+        $day = 3;
     }
 
     require_once "model/usersManager.php";
     $users = getUsers();
 
     foreach ($users as $user) {
-        if ($_SESSION['userEmailAddress'] == $user['email']){
+        if ($_SESSION['userEmailAddress'] == $user['email']) {
             $userId = $user['id'];
         }
     }
@@ -205,7 +218,8 @@ function buyBillet(){
 
 }
 
-function confirmCart(){
+function confirmCart()
+{
     $userEmailAddress = $_GET['userEmailAddress'];
 
     require_once "model/billetsManager.php";
@@ -218,8 +232,10 @@ function confirmCart(){
                 if ($reservation['users_id'] == $user['id']) {
                     if ($reservation['days_id'] == 1) {
                         $day = '2021-06-26';
-                    } else {
+                    } elseif ($reservation['days_id'] == 2) {
                         $day = '2021-06-27';
+                    } else {
+                        $day = '2021-06-26/27';
                     }
                     require_once "model/billetsManager.php";
                     confirmCartBD($reservation['name'], $reservation['vip'], $reservation['price'], $reservation['reservationNumber'], $day, $user['email']);

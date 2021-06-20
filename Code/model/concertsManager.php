@@ -24,7 +24,8 @@ function getDays()
     return $days;
 }
 
-function getConcertsScenes() {
+function getConcertsScenes()
+{
     $sql = "SELECT * FROM concerts_workthrough_scenes";
     require_once "model/dbconnector.php";
     $concertsScenes = executeQuerySelect($sql);
@@ -39,6 +40,10 @@ function getScenes()
     return $scenes;
 }
 
+/**
+ * @param $concertID
+ * @return array|null
+ */
 function supConcertBDD($concertID)
 {
     $sql = "DELETE FROM concerts WHERE id='$concertID'";
@@ -47,11 +52,19 @@ function supConcertBDD($concertID)
     return $delConcerts;
 }
 
-function addConcertBDD($concertID)
+/**
+ * @param $startTime
+ * @param $endTime
+ * @param $artistID
+ * @param $dayID
+ * @return bool|null
+ */
+function addConcertBDD($startTime, $endTime, $artistID, $dayID)
 {
-    $sql = "INSERT INTO concerts ('startTime', 'endTime', 'artist_id', 'days_id') VALUES ()";
+    $sql = "INSERT INTO concerts (startTime, endTime, artist_id, days_id) VALUES ('$startTime', '$endTime','$artistID','$dayID')";
+    echo $sql;
     require_once "model/dbconnector.php";
-    $addConcerts = executeQuerySelect($sql);
+    $addConcerts = executeQueryIUD($sql);
     return $addConcerts;
 }
 
