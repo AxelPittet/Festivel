@@ -114,7 +114,8 @@ Différents risques pouvant nuir à la réussite du projet :
 
 ### Journal de bord :  
 
-![Journal de bord](https://github.com/Axwells/Festivel/blob/main/Documentation/Journal_de_bord_Festivel.PNG)
+![Journal de bord](https://github.com/Axwells/Festivel/blob/main/Documentation/Journal_de_bord_Festivel1.PNG)
+![Journal de bord](https://github.com/Axwells/Festivel/blob/main/Documentation/Journal_de_bord_Festivel2.PNG)
 
 
 ### MCD :  
