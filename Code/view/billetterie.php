@@ -20,7 +20,21 @@ ob_start();
                             <li>Prix : 40 CHF
                             </li>
                             <br>
-                            <li><a href="index.php?action=buyBillet&day=2021-06-26&vip=0&price=40&name=Billet individuel pour le 26 Juin"><input id="btnAcheter" type="submit" value="Acheter" class="flex-c-m size10 bg4 bo-rad-23 hov1 m-text3 trans-0-4">
+                            <li>
+                                <?php if (isset($_SESSION['userType'])) : ?>
+                                        <a href="index.php?action=buyBillet&day=2021-06-26&vip=0&price=40&name=Billet individuel pour le 26 Juin">
+                                            <button id="btnAcheter" type="submit"
+                                                    class="flex-c-m size10 bg4 bo-rad-23 hov1 m-text3 trans-0-4">Acheter
+                                            </button>
+                                        </a>
+                                    <?php else : ?>
+                                    <a href="index.php?action=register">
+                                        <button id="btnAcheter" type="submit"
+                                                class="flex-c-m size10 bg4 bo-rad-23 hov1 m-text3 trans-0-4">Inscrivez
+                                            vous pour acheter ce billet !
+                                        </button>
+                                    </a>
+                                <?php endif; ?>
                             </li>
                     </div>
                 </div>
@@ -38,7 +52,21 @@ ob_start();
                             <li>Prix : 60 CHF
                             </li>
                             <br>
-                            <li><a href="index.php?action=buyBillet&day=2021-06-26&vip=1&price=60&name=Billet individuel pour le 26 Juin"><input id="btnAcheter" type="submit" value="Acheter" class="flex-c-m size10 bg4 bo-rad-23 hov1 m-text3 trans-0-4">
+                            <li>
+                                <?php if (isset($_SESSION['userType'])) : ?>
+                                        <a href="index.php?action=buyBillet&day=2021-06-26&vip=1&price=60&name=Billet individuel pour le 26 Juin">
+                                            <button id="btnAcheter" type="submit"
+                                                    class="flex-c-m size10 bg4 bo-rad-23 hov1 m-text3 trans-0-4">Acheter
+                                            </button>
+                                        </a>
+                                    <?php else : ?>
+                                    <a href="index.php?action=register">
+                                        <button id="btnAcheter" type="submit"
+                                                class="flex-c-m size10 bg4 bo-rad-23 hov1 m-text3 trans-0-4">Inscrivez
+                                            vous pour acheter ce billet !
+                                        </button>
+                                    </a>
+                                <?php endif; ?>
                             </li>
                     </div>
                 </div>
@@ -56,7 +84,21 @@ ob_start();
                             <li>Prix : 40 CHF
                             </li>
                             <br>
-                            <li><a href="index.php?action=buyBillet&day=2021-06-27&vip=0&price=40&name=Billet individuel pour le 27 Juin"><input id="btnAcheter" type="submit" value="Acheter" class="flex-c-m size10 bg4 bo-rad-23 hov1 m-text3 trans-0-4">
+                            <li>
+                                <?php if (isset($_SESSION['userType'])) : ?>
+                                <a href="index.php?action=buyBillet&day=2021-06-27&vip=0&price=40&name=Billet individuel pour le 27 Juin">
+                                    <button id="btnAcheter" type="submit"
+                                            class="flex-c-m size10 bg4 bo-rad-23 hov1 m-text3 trans-0-4">Acheter
+                                    </button>
+                                </a>
+                                <?php else : ?>
+                                    <a href="index.php?action=register">
+                                        <button id="btnAcheter" type="submit"
+                                                class="flex-c-m size10 bg4 bo-rad-23 hov1 m-text3 trans-0-4">Inscrivez
+                                            vous pour acheter ce billet !
+                                        </button>
+                                    </a>
+                                <?php endif; ?>
                             </li>
                     </div>
                 </div>
@@ -74,7 +116,21 @@ ob_start();
                             <li>Prix : 60 CHF
                             </li>
                             <br>
-                            <li><a href="index.php?action=buyBillet&day=2021-06-27&vip=1&price=60&name=Billet individuel pour le 27 Juin"><input id="btnAcheter" type="submit" value="Acheter" class="flex-c-m size10 bg4 bo-rad-23 hov1 m-text3 trans-0-4">
+                            <li>
+                                <?php if (isset($_SESSION['userType'])) : ?>
+                                <a href="index.php?action=buyBillet&day=2021-06-27&vip=1&price=60&name=Billet individuel pour le 27 Juin">
+                                    <button id="btnAcheter" type="submit"
+                                            class="flex-c-m size10 bg4 bo-rad-23 hov1 m-text3 trans-0-4">Acheter
+                                    </button>
+                                </a>
+                                <?php else : ?>
+                                    <a href="index.php?action=register">
+                                        <button id="btnAcheter" type="submit"
+                                                class="flex-c-m size10 bg4 bo-rad-23 hov1 m-text3 trans-0-4">Inscrivez
+                                            vous pour acheter ce billet !
+                                        </button>
+                                    </a>
+                                <?php endif; ?>
                             </li>
                     </div>
                 </div>
@@ -92,7 +148,21 @@ ob_start();
                             <li>Prix : 70 CHF
                             </li>
                             <br>
-                            <li><a href="index.php?action=buyBillet&day=2021-06-26/27&vip=0&price=70&name=Pass individuel pour le 26-27 Juin"><input id="btnAcheter" type="submit" value="Acheter" class="flex-c-m size10 bg4 bo-rad-23 hov1 m-text3 trans-0-4">
+                            <li>
+                                <?php if (isset($_SESSION['userType'])) : ?>
+                                <a href="index.php?action=buyBillet&day=2021-06-26/27&vip=0&price=70&name=Pass individuel pour le 26-27 Juin">
+                                    <button id="btnAcheter" type="submit"
+                                            class="flex-c-m size10 bg4 bo-rad-23 hov1 m-text3 trans-0-4">Acheter
+                                    </button>
+                                </a>
+                                <?php else : ?>
+                                    <a href="index.php?action=register">
+                                        <button id="btnAcheter" type="submit"
+                                                class="flex-c-m size10 bg4 bo-rad-23 hov1 m-text3 trans-0-4">Inscrivez
+                                            vous pour acheter ce billet !
+                                        </button>
+                                    </a>
+                                <?php endif; ?>
                             </li>
                     </div>
                 </div>
@@ -110,7 +180,21 @@ ob_start();
                             <li>Prix : 100 CHF
                             </li>
                             <br>
-                            <li><a href="index.php?action=buyBillet&day=2021-06-26/27&vip=1&price=100&name=Pass individuel pour le 26-27 Juin"><input id="btnAcheter" type="submit" value="Acheter" class="flex-c-m size10 bg4 bo-rad-23 hov1 m-text3 trans-0-4">
+                            <li>
+                                <?php if (isset($_SESSION['userType'])) : ?>
+                                <a href="index.php?action=buyBillet&day=2021-06-26/27&vip=1&price=100&name=Pass individuel pour le 26-27 Juin">
+                                    <button id="btnAcheter" type="submit"
+                                            class="flex-c-m size10 bg4 bo-rad-23 hov1 m-text3 trans-0-4">Acheter
+                                    </button>
+                                </a>
+                                <?php else : ?>
+                                    <a href="index.php?action=register">
+                                        <button id="btnAcheter" type="submit"
+                                                class="flex-c-m size10 bg4 bo-rad-23 hov1 m-text3 trans-0-4">Inscrivez
+                                            vous pour acheter ce billet !
+                                        </button>
+                                    </a>
+                                <?php endif; ?>
                             </li>
                     </div>
                 </div>

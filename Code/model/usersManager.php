@@ -1,5 +1,10 @@
 <?php
 
+/**
+ * @param $userEmailAddress
+ * @param $userPsw
+ * @return bool
+ */
 function isLoginCorrect($userEmailAddress, $userPsw)
 {
     $result = false;
@@ -24,6 +29,14 @@ function isLoginCorrect($userEmailAddress, $userPsw)
     return $result;
 }
 
+/**
+ * @param $userEmailAddress
+ * @param $userPsw
+ * @param $userName
+ * @param $userFirstName
+ * @param $userNumberPhone
+ * @return bool|null
+ */
 function registerNewAccount($userEmailAddress, $userPsw, $userName, $userFirstName, $userNumberPhone)
 {
 
@@ -44,7 +57,10 @@ function getUsers()
     return $users;
 }
 
-
+/**
+ * @param $userEmailAddress
+ * @return int|mixed
+ */
 function getUserType($userEmailAddress) {
     $result = 1;
 

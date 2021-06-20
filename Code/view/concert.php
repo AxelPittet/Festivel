@@ -31,9 +31,16 @@ foreach ($concerts as $concert):
                                                     de <?= $concert['startTime'] ?>
                                                     à <?= $concert['endTime'] ?>.</p><br><br>
                                                 <p id="concert-artist-description"><?= $artist['description'] ?></p><br><br><br>
-                                                <a href="index.php?action=billetterie">
-                                                    <button class="btn">Commandez votre place !</button>
-                                                </a>
+                                                <?php if (isset($_SESSION['userType'])) : ?>
+                                                        <a href="index.php?action=billetterie">
+                                                            <button class="btn">Commandez votre place !</button>
+                                                        </a>
+                                                    <?php else : ?>
+                                                    <a href="index.php?action=register">
+                                                        <button class="btn">Inscrivez vous pour acheter ce billet !
+                                                        </button>
+                                                    </a>
+                                                <?php endif; ?>
                                             </div>
 
                                         </section>

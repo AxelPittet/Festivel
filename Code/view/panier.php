@@ -13,7 +13,6 @@ ob_start();
                     <tr>
                         <th>Produit</th>
                         <th>VIP</th>
-                        <th>Quantité</th>
                         <th>Prix</th>
                         <th>Date</th>
                     </tr>
@@ -40,17 +39,8 @@ ob_start();
                                     <tr>
                                         <td><?= $reservation['name'] ?></td>
                                         <td><?= $vip ?></td>
-                                        <td><?= $reservation['quantity'] ?></td>
                                         <td><?= $reservation['price'] ?> CHF</td>
                                         <td><?= $day ?></td>
-                                        <td>
-                                            <a href="index.php?action=qtychange&reservationId=<?= $reservation['id'] ?>&modif=1">
-                                                <button class="btn btn-secondary" type="submit"> + </button>
-                                            </a>
-                                            <a href="index.php?action=qtychange&reservationId=<?= $reservation['id'] ?>&modif=-1">
-                                                <button class="btn btn-secondary" type="submit"> - </button>
-                                            </a>
-                                        </td>
                                         <td>
                                             <a href="index.php?action=delCart&reservationId=<?= $reservation['id'] ?>">
                                                 <button class="btn btn-secondary" type="submit"> Supprimer </button>
